@@ -4,8 +4,8 @@
 	{
 		"ControlName"	"EditablePanel"
 		"fieldName"		"ModelContainer"
-		"xpos"			"cs-0.5"
-		"ypos"			"cs-0.5"
+		"xpos"			"0"
+		"ypos"			"0"
 		"zpos"			"3"		
 		"wide"			"f0"
 		"tall"			"f0"
@@ -16,11 +16,11 @@
 		{
 			"ControlName"	"CTFParticlePanel"
 			"fieldName"		"BelowModelParticlePanel"
-			"xpos"			"130"
+			"xpos"			"163"
 			"ypos"			"3"
 			"zpos"			"-1"
-			"wide"			"f0"
-			"tall"			"f0"
+			"wide"			"38"
+			"tall"			"38"
 			"visible"		"1"
 			"proportionaltoparent"	"1"
 
@@ -44,30 +44,19 @@
 		{
 			"ControlName"	"CBaseModelPanel"
 			"fieldName"		"RankModel"
-			"xpos"			"244"
-			"ypos"			"3"
+			"xpos"			"190" //163
+			"ypos"			"0"
 			"zpos"			"0"		
-			"wide"			"100"
-			"tall"			"100"
+			"wide"			"64"
+			"tall"			"64"
 			"autoResize"	"0"
 			"pinCorner"		"0"
 			"visible"		"1"
 			"enabled"		"1"
-			"fov"			"70"
+			"fov"			"50"
 			"proportionaltoparent"	"1"
-
-			if_mini
-			{
-				"xpos"		"cs-0.5-228"
-				"ypos"		"cs-0.5"
-				"wide"		"200"
-				"tall"		"200"
-			}
-
 			"paintbackground"	"0"
-
 			"render_texture"	"0"
-		
 			"model"
 			{
 				"force_pos"		"1"
@@ -76,15 +65,10 @@
 				"angles_x"	"0"
 				"angles_y"	"180"
 				"angles_z"	"0"
-				"origin_x"		"45"
+				"origin_x"		"52"
 				"origin_y"		"0"
 				"origin_z"		"0"
 				"spotlight"	"1"
-
-				if_mini
-				{
-					"origin_x"		"55"
-				}
 
 				"animation"
 				{
@@ -92,7 +76,6 @@
 					"default"	"1"
 				}
 			}
-		
 			"lights"
 			{
 				"default"
@@ -108,16 +91,14 @@
 		{
 			"ControlName"	"CTFParticlePanel"
 			"fieldName"		"AboveModelParticlePanel"
-			"xpos"			"134"
-			"ypos"			"2"
+			"xpos"			"190"
+			"ypos"			"0"
 			"zpos"			"1"
-			"wide"			"f0"
-			"tall"			"f0"
+			"wide"			"64"
+			"tall"			"64"
 			"visible"		"1"
 			"proportionaltoparent"	"1"
-
 			"paintbackground"	"0"
-
 			"ParticleEffects"
 			{
 				"0"
@@ -148,24 +129,21 @@
 					"loop"	"0"
 				}
 			}
-
-			"paintbackground"	"1"
 		}
 
 		"MedalButton"
 		{
 			"ControlName"	"Button"
 			"fieldName"		"MedalButton"
-			"xpos"			"260"
-			"ypos"			"0"
+			"xpos"			"206"
+			"ypos"			"16"
 			"zpos"			"100"
-			"wide"			"1"
-			"tall"			"1"
+			"wide"			"32"
+			"tall"			"32"
 			"proportionaltoparent"	"1"
 			"command"	"medal_clicked"
 			"actionsignallevel"	"2"
 			"labeltext"	""
-
 			"paintbackground"	"0"
 			"backgroundenabled"	"0"
 		}
@@ -175,58 +153,43 @@
 	{
 		"ControlName"	"EditablePanel"
 		"fieldName"		"BGPanel"
-		"xpos"			"rs1"
-		"ypos"			"20"
+		"xpos"			"0"
+		"ypos"			"0"
 		"zpos"			"-1"
 		"wide"			"260"
-		"tall"			"f40"
+		"tall"			"60"
 		"visible"		"1"
 		"PaintBackgroundType"	"2"
 		"border"		"NoBorder"
-		"proportionaltoparent"	"1"
-
-		if_mini
-		{
-			"xpos"			"cs-0.5"
-			"ypos"			"cs-0.5"
-			"tall"			"35"
-			"wide"			"505"
-			"border"		"MainMenuBGBorder"
-		}
+		"proportionaltoparent"	"0"
 
 		"NameLabel"
 		{
 			"ControlName"	"Label"
 			"fieldName"		"NameLabel"
-			"xpos"			"65"
-			"ypos"			"5"
-			"wide"			"f0"
+			"xpos"			"5"
+			"ypos"			"3"
+			"wide"			"186"
 			"zpos"			"100"
 			"tall"			"20"
 			"visible"		"1"
 			"enabled"		"1"
 			"font"			"RobotoCondensedBold16"
 			"fgcolor_override"	"TanLight"
-			"textAlignment"	"north-west"
+			"textAlignment"	"west"
 			"labelText"		"%name%"
 			"proportionaltoparent"	"1"
-
-			if_mini
-			{
-				"visible"	"0"
-				"font"		"HudFontSmallishBold"
-			}
 		}
 
-		"DescLabel1"
+		"DescLine1"
 		{
-			"ControlName"	"Label"
-			"fieldName"		"DescLabel1"
-			"xpos"			"65"
+			"ControlName"	"CAutoFittingLabel"
+			"fieldName"		"DescLine1"
+			"xpos"			"5"
 			"ypos"			"20"
-			"wide"			"f0"
+			"wide"			"186"
 			"zpos"			"100"
-			"tall"			"20"
+			"tall"			"12"
 			"visible"		"1"
 			"enabled"		"1"
 			"font"			"RobotoCondensedBold12"
@@ -234,87 +197,57 @@
 			"textAlignment"	"north-west"
 			"labelText"		"%desc1%"
 			"proportionaltoparent"	"1"
-
-			if_mini
-			{
-				"xpos"	"67"
-				"ypos"	"4"
-				"font"	"HudFontSmallestBold"
-			}
 		}
-
-		"DescLabel2"
+		"DescLine2"
 		{
-			"ControlName"	"Label"
-			"fieldName"		"DescLabel2"
-			"xpos"			"65"
-			"ypos"			"30"
-			"wide"			"f0"
+			"ControlName"	"CAutoFittingLabel"
+			"fieldName"		"DescLine2"
+			"xpos"			"5"
+			"ypos"			"32"
+			"wide"			"190"
 			"zpos"			"100"
-			"tall"			"20"
-			"visible"		"0" // This seems to always say "[unknown]" despite being in Valve's config. No idea what it's for.
+			"tall"			"12"
+			"visible"		"1" // This seems to always say "[unknown]" despite being in Valve's config. No idea what it's for.
 			"enabled"		"1"
-			"font"			"RobotoCondensedBold12"
+			"font"			"RobotoCondensedBold16"
 			"fgcolor_override"	"TanLight"
 			"textAlignment"	"north-west"
 			"labelText"		"%desc2%"
 			"proportionaltoparent"	"1"
-
-			if_mini
-			{
-				"xpos"	"67"
-				"ypos"	"4"
-				"font"	"HudFontSmallestBold"
-			}
-
-			"colors" // i dunno when this applies but it's in Valve's config so...
-			{
-				"1"		"CreditsGreen"
-				"2"		"TanLight"
-			}
 		}
 
 		"StatsContainer"
 		{
 			"ControlName"	"EditablePanel"
 			"fieldName"		"StatsContainer"
-			"xpos"			"rs1-5"
-			"ypos"			"0"
-			"wide"			"f70"
+			"xpos"			"2"
+			"ypos"			"-8"
+			"wide"			"200"
 			"tall"			"f0"
 			"proportionaltoparent"	"1"
-
-			if_mini
-			{
-				"xpos"			"rs1-10"
-				"ypos"			"0"
-				"wide"			"p0.85"
-			}
 
 			"XPBar"
 			{
 				"Controlname"	"EditablePanel"
 				"fieldName"		"XPBar"
-				"xpos"			"cs-0.5"
-				"ypos"			"rs1-3"
+				"xpos"			"0"
+				"ypos"			"28"
 				"wide"			"p1"
 				"tall"			"30"
-				"proportionaltoparent"	"1"
-
-	
+				"proportionaltoparent"	"1"	
 
 				"CurrentXPLabel"
 				{
 					"ControlName"	"Label"
 					"fieldName"		"CurrentXPLabel"
-					"xpos"			"0"
+					"xpos"			"3"
 					"ypos"			"rs1"
 					"zpos"			"0"
 					"wide"			"100"
 					"tall"			"20"
 					"visible"		"1"
 					"enabled"		"1"
-					"font"			"ItemFontAttribSmall"
+					"font"			"RobotoCondensedRegular10"
 					"fgcolor_override"	"TanLight"
 					"textAlignment"	"south-west"
 					"labelText"		"%current_xp%"
@@ -325,14 +258,14 @@
 				{
 					"ControlName"	"Label"
 					"fieldName"		"NextLevelXPLabel"
-					"xpos"			"rs1"
+					"xpos"			"rs1-3"
 					"ypos"			"rs1"
 					"zpos"			"0"
 					"wide"			"100"
 					"tall"			"20"
 					"visible"		"1"
 					"enabled"		"1"
-					"font"			"ItemFontAttribSmall"
+					"font"			"RobotoCondensedRegular10"
 					"fgcolor_override"	"TanLight"
 					"textAlignment"	"south-east"
 					"labelText"		"%next_level_xp%"
@@ -405,11 +338,6 @@
 				"visible"		"0"
 				"proportionaltoparent"	"1"
 				"bgcolor_override"	"0 0 0 150"
-
-				"if_mini"
-				{
-					"visible"		"0"
-				}
 
 				"Frame"
 				{

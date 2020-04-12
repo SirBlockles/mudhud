@@ -1,6 +1,6 @@
 "Resource/UI/HudItemEffectMeter_Spy.res"
 {
-	HudItemEffectMeter
+	HudItemEffectMeter // crit counter for diamondback
 	{
 		"fieldName"		"HudItemEffectMeter"
 		"visible"		"1"

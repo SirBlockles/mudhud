@@ -1,3 +1,7 @@
+//The preload panel pre-loads cap icons and other custom materials so that they show up in-game. switch the comment to the debug to literally show the panel on the main menu.
+#base "MainMenuPreload.res"
+//#base "MainMenuPreloadDebug.res"
+
 "Resource/UI/MainMenuOverride.res"
 {
 	MainMenuOverride
@@ -323,7 +327,7 @@
 		"zpos"			"-200"
 		"wide"			"f0"
 		"tall"			"480"
-		"visible"		"0"
+		"visible"		"1"
 		"enabled"		"1"
 		"image"			""
 		"scaleImage"	"1"
@@ -374,7 +378,7 @@
 		"ControlName"	"CExLabel"
 		"fieldName"		"MudHudText"
 		"font"			"RobotoCondensedBold12"
-		"labelText"		"MudHUD"
+		"labelText"		"mudhud v1.0 PRE-RELEASE"
 		"textAlignment"	"center"
 		"xpos"			"c-569"
 		"ypos"			"87"
@@ -409,34 +413,15 @@
 		"xpos"		"999999"
 	}
 	
-	"RankModelPanel"
-	{
-		"ControlName"	"CPvPRankPanel"
-		"fieldName"		"RankModelPanel"
-		"xpos"			"cs-0.5-256"
-		"ypos"			"cs-0.5-120"
-
-		"zpos"			"-51"
-		"wide"			"0"
-		"tall"			"1000"
-		"visible"		"1"
-		"proportionaltoparent"	"1"
-		"mouseinputenabled"	"1"
-
-		"matchgroup"	"MatchGroup_Casual_12v12"
-
-		"show_progress"	"1"
-	}
-	
 	"RankPanel"
 	{
 		"ControlName"	"CPvPRankPanel"
 		"fieldName"		"RankPanel"
-		"xpos"			"c-363"
-		"ypos"			"85"
+		"xpos"			"c-245"
+		"ypos"			"108"
 		"zpos"			"-52"
-		"wide"			"320"
-		"tall"			"100"
+		"wide"			"200"
+		"tall"			"60"
 		"visible"		"1"
 		"proportionaltoparent"	"1"
 		"mouseinputenabled"	"1"
@@ -444,7 +429,78 @@
 		"matchgroup"	"MatchGroup_Casual_12v12"
 		"xp_source_notification_center_x"	"350"
 
-		"show_model"	"1"
+		"show_model"	"0"
+		"show_progress"	"1"
+	}
+	"RankModelPanel"
+	{
+		"ControlName"	"CPvPRankPanel"
+		"fieldName"		"RankModelPanel"
+		"xpos"			"50"
+		"ypos"			"50"
+		"zpos"			"-51"
+		"wide"			"50"
+		"tall"			"50"
+		"visible"		"1"
+		"proportionaltoparent"	"1"
+		"mouseinputenabled"	"1"
+
+		"matchgroup"	"MatchGroup_Casual_12v12"
+
+		"show_progress"	"0"
+	}
+		"CycleRankTypeButton"
+	{
+		"ControlName"	"CExImageButton"
+		"fieldName"		"CycleRankTypeButton"
+		"xpos"			"cs-0.5-44"
+		"ypos"			"cs-0.5-134"
+		"wide"			"15"
+		"tall"			"15"
+		"autoResize"	"0"
+		"pinCorner"		"3"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"textinsetx"	"25"
+		"labelText"		""
+		"use_proportional_insets" "1"
+		"font"			"HudFontSmallBold"
+		"command"		"open_rank_type_menu"
+		"textAlignment"	"west"
+		"dulltext"		"0"
+		"brighttext"	"0"
+		"default"		"1"
+		"sound_depressed"	"UI/buttonclick.wav"
+		"sound_released"	"vo/null.mp3"
+		"actionsignallevel" "1"
+		"proportionaltoparent"	"1"
+				
+		"sound_depressed"	"UI/buttonclick.wav"
+		"sound_released"	"UI/buttonclickrelease.wav"
+		"paintbackground"	"1"
+		"paintborder"		"0"
+		"image_drawcolor"	"235 226 202 255"
+		"image_armedcolor"	"255 255 255 255"
+
+		"SubImage"
+		{
+			"ControlName"	"ImagePanel"
+			"fieldName"		"SubImage"
+			"xpos"			"cs-0.5"
+			"ypos"			"cs-0.5"
+			"zpos"			"1"
+			"wide"			"f2"
+			"tall"			"f2"
+			"visible"		"1"
+			"enabled"		"1"
+			"scaleImage"	"1"
+			"image"			"glyph_options"
+
+			"proportionaltoparent"	"1"
+			"mouseinputenabled"	"0"
+			"keyboardinputenabled" "0"
+		}		
 	}
 	
 	"FriendsContainer"
@@ -510,8 +566,8 @@
 			"columns_count"	"2"
 			"inset_x"		"10"
 			"inset_y"		"5"
-			"row_gap"		"5"
-			"column_gap"	"5"
+			"row_gap"		"3"
+			"column_gap"	"3"
 			"restrict_width"	"0"
 
 			"friendpanel_kv"
@@ -1409,7 +1465,7 @@
 		"zpos"			"15"
 		"wide"			"92"
 		"tall"			"20"
-		"visible"		"0"
+		"visible"		"1"
 		"PaintBackgroundType"	"0"
 
 		"navUp"			"PlayPVEButton"
@@ -1436,6 +1492,7 @@
 			"dulltext"		"0"
 			"brighttext"		"0"
 			"default"		"1"
+			"labelText"		"EPIC"
 			"sound_depressed"	"UI/buttonclick.wav"
 			"sound_released"	"UI/buttonclickrelease.wav"
 			
@@ -1473,12 +1530,6 @@
 		"tall"			"20"
 		"visible"		"1"
 		"PaintBackgroundType"	"2"
-
-		"navUp"			"GeneralStoreButton"
-		"navDown"		"QuitButton"
-		"navLeft"		"ReplayBrowserButton"
-		"navRight"		"Notifications_ShowButtonPanel"
-		"navToRelay"		"SubButton"
 
 		"SubButton"
 		{
@@ -1535,11 +1586,6 @@
 		"tall"			"36"
 		"visible"		"1"
 		"PaintBackgroundType"	"2"
-
-		"navUp"			"ChangeServerButton"
-		"navDown"		"ReplayBrowserButton"
-		"navRight"		"GeneralStoreButton"
-		"navToRelay"	"SubButton"
 
 		"SubButton"
 		{
@@ -2204,7 +2250,6 @@
 			}				
 		}
 	}
-	
 	"ReportPlayerButton"
 	{
 		"ControlName"		"EditablePanel"

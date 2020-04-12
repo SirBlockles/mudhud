@@ -3,13 +3,18 @@
 //Health Bonus Pulse
 event HudHealthBonusPulse
 {
-	Animate	PlayerStatusHealthBonusImage 	Alpha		"255"		Linear 0.0 0.2
+	Animate	PlayerStatusHealthBonusImage 	Alpha		"100"		Linear 0.0 0.2
 	Animate	PlayerStatusHealthBonusImage 	Alpha		"0"			Linear 0.2 0.4
 	
 	Animate PlayerStatusHealthValue			FgColor		"91 240 131 255"	Linear 0.0 0.0
 	
 	Animate GreenFilter						Alpha		"255"	Linear	0.0 0.2
 	Animate GreenFilter						Alpha		"0"		Linear	0.2 0.4
+	
+	Animate CrosshairDot	FgColor	"40 175 70 255"	Linear 0.0 0.2
+	Animate CrosshairDot	FgColor	"125 245 165 255"	Linear 0.2 0.4
+	Animate CrosshairWings	FgColor	"40 175 70 255"	Linear 0.0 0.2
+	Animate CrosshairWings	FgColor	"125 245 165 255"	Linear 0.2 0.4
 
 	RunEvent HudHealthBonusPulseLoop	0.4
 }
@@ -24,9 +29,13 @@ event HudHealthBonusPulseStop
 {
 	StopEvent HudHealthBonusPulse 0.0
 	StopEvent HudHealthBonusPulseLoop 0.0
+	StopEvent HudCrosshairBonusPulse 0.0
+	StopEvent HudCrosshairBonusPulseLoop 0.0
 	
 	Animate PlayerStatusHealthValue		FgColor		"White_Custom"	Linear 0.0 0.0
 	Animate GreenFilter					Alpha		"0"				"Accel"	0.0 0.25
+	Animate CrosshairDot				FgColor		"255 150 0 255"	"Accel"	0.0 0.25
+	Animate CrosshairWings				FgColor		"255 150 0 255"	"Accel"	0.0 0.25
 }
 
 //===========================================
@@ -34,11 +43,16 @@ event HudHealthBonusPulseStop
 //Health Dying Pulse
 event HudHealthDyingPulse
 {
-	Animate	PlayerStatusHealthBonusImage 	Alpha		"255"		Linear 0.0 0.075
+	Animate	PlayerStatusHealthBonusImage 	Alpha		"100"		Linear 0.0 0.075
 	Animate	PlayerStatusHealthBonusImage 	Alpha		"0"			Linear 0.125 0.075
 	
 	Animate PlayerStatusHealthValue			FgColor		"255 200 0 255"	Linear 0.0 0.0
 	Animate PlayerStatusHealthValueSpec			FgColor		"255 200 0 255"	Linear 0.0 0.0
+	
+	Animate CrosshairDot	FgColor	"185 65 65 255"	Linear 0.0 0.14
+	Animate CrosshairDot	FgColor	"255 190 190 255"	Linear 0.14 0.25
+	Animate CrosshairWings	FgColor	"185 65 65 255"	Linear 0.0 0.14
+	Animate CrosshairWings	FgColor	"255 190 190 255"	Linear 0.14 0.25
 	
 	RunEvent HudHealthDyingPulseLoop	0.25
 }
@@ -55,15 +69,19 @@ event HudHealthDyingPulseStop
 	StopEvent HudHealthDyingPulseLoop 0.0
 	
 	Animate PlayerStatusHealthValue			FgColor		"White_Custom"		Linear 0.0 0.0
-	Animate PlayerStatusHealthValueSpec			FgColor		"White_Custom"	Linear 0.0 0.0	
+	Animate PlayerStatusHealthValueSpec			FgColor		"White_Custom"	Linear 0.0 0.0
+	Animate CrosshairDot				FgColor		"255 150 0 255"	"Accel"	0.0 0.14
+	Animate CrosshairWings				FgColor		"255 150 0 255"	"Accel"	0.0 0.14
 }
 
 //===========================================
 
 event HudLowAmmoPulse
 {
-	Animate	HudWeaponLowAmmoImage		Alpha		"255"		Linear 0.0 0.075
-	Animate	HudWeaponLowAmmoImage		Alpha		"0"			Linear 0.125 0.075
+	Animate	HudWeaponLowAmmoLabel		FgColor		"255 0 0 255"		Linear 0.0 0.075
+	Animate	HudWeaponLowAmmoLabel		FgColor		"255 0 0 0"			Linear 0.125 0.075
+	Animate	HudWeaponLowAmmoLabelDrop	FgColor		"0 0 0 255"		Linear 0.0 0.075
+	Animate	HudWeaponLowAmmoLabelDrop	FgColor		"0 0 0 0"			Linear 0.125 0.075
 	
 	RunEvent HudLowAmmoPulseLoop	0.25
 }
@@ -78,6 +96,9 @@ event HudLowAmmoPulseStop
 {
 	StopEvent HudLowAmmoPulse 0.0
 	StopEvent HudLowAmmoPulseLoop 0.0
+	
+	Animate	HudWeaponLowAmmoLabel		FgColor		"255 0 0 0"			Linear 0.0 0.0
+	Animate	HudWeaponLowAmmoLabelDrop	FgColor		"0 0 0 0"			Linear 0.0 0.0
 }
 
 //===========================================
@@ -91,6 +112,9 @@ event HudMedicCharged
 	
 	Animate	ChargeMeter 	FgColor		"91 240 131 255"		Linear 0.0 0.3	
 	Animate	ChargeMeter 	FgColor		"91 157 109 255"		Linear 0.3 0.3
+	
+	Animate	HealthClusterIcon 	drawcolor		"91 240 131 255"		Linear 0.0 0.3
+	Animate	HealthClusterIcon 	drawcolor		"91 157 109 255"		Linear 0.3 0.3
 
 	RunEvent HudMedicChargedLoop	0.6
 }
@@ -107,11 +131,133 @@ event HudMedicChargedStop
 	StopEvent HudMedicChargedLoop 0.0
 	
 	Animate	ChargeLabel 	FgColor		"White_Custom"		Linear 0.0 0.0001
-	Animate	ChargeMeter 	FgColor		"White_Custom"		Linear 0.0 0.0001
+	Animate	ChargeMeter 	FgColor		"200 255 200 255"		Linear 0.0 0.0001
+	Animate	HealthClusterIcon 	drawcolor		"White_Custom"		Linear 0.0 0.0001
 }
-//===========================================
-//stop the death panels from animating in casual HUD
+
+// make the match status player panels not throw the respawn times off screen
 event TeamStatus_PlayerDead
 {
+	//SetVisible TimerAccent  1 0
+	//SetVisible SkullPanel  1 0
+	SetVisible respawntime  1 0
 }
-//===========================================
+
+event TeamStatus_PlayerAlive
+{
+	//SetVisible TimerAccent  0 0.2
+	//SetVisible SkullPanel  0 0.2
+	SetVisible respawntime 0 0.2
+}
+// make koth inactive timers on the match hud slightly easier to read by making inactive timer darker
+event ActiveTimerBGPulse
+{
+	Animate	ActiveTimerBG 	Alpha		"0"			Linear 0.1 0.1
+	Animate	ActiveTimerBG 	Alpha		"255"		Linear 0.3 0.1
+	
+	Animate	ActiveTimerBG 	Alpha		"0"			Linear 0.5 0.1
+	Animate	ActiveTimerBG 	Alpha		"255"		Linear 0.7 0.1
+	
+	Animate	ActiveTimerBG 	Alpha		"0"			Linear 0.9 0.1
+	Animate	ActiveTimerBG 	Alpha		"255"		Linear 1.1 0.1
+}
+
+event ActiveTimerHighlight
+{
+	Animate TimePanelValue FgColor	TanLight		Linear 0.1 0.1
+	Animate TimePanelValue FgColor	"50 50 50 185"		Linear 0.3 0.1
+
+	Animate TimePanelValue FgColor	TanLight		Linear 0.5 0.1
+	Animate TimePanelValue FgColor	"50 50 50 185"		Linear 0.7 0.1
+
+	Animate TimePanelValue FgColor	TanLight		Linear 0.9 0.1
+	Animate TimePanelValue FgColor	"50 50 50 185"		Linear 1.1 0.1
+
+	Animate TimePanelValue FgColor	TanLight		Linear 1.3 0.3
+	
+}
+
+event ActiveTimerDim
+{
+	// Slow fade out
+	Animate TimePanelValue FgColor	"50 50 50 185"		Linear 0.0 0.4
+}
+
+// make the inner crosshair flash when damage is dealt
+event DamagedPlayer 
+{
+	StopEvent HitMarker 				0.0
+	RunEvent HitMarker 					0.01
+}
+event HitMarker
+{
+	Animate CrosshairFill	 			FgColor 	"0 192 192 255" 	Linear 0.0 0.0
+	Animate CrosshairFill	 			FgColor 	"0 192 192 0" 		Linear 0.15 0.15
+}
+
+// make the chatbox not move by defining empty events
+
+event CompetitiveGame_LowerChatWindow
+{
+	//Animate HudChat ypos r140 Accel 0 0
+}
+
+event CompetitiveGame_RestoreChatWindow
+{
+	//Animate HudChat ypos 275 Accel 0 0
+}
+
+event HudTournamentSetupPanelOpen
+{
+	Animate HudTournamentSetup	Position	"c-90 -100"	Linear 0.0 0.001
+	Animate HudTournamentSetup	Position	"c-90 c-125"	Spline 0.001 0.2
+}
+
+event HudTournamentSetupPanelClose
+{
+	Animate HudTournamentSetup	Position	"c-90 c-125"	Linear 0.0 0.001
+	Animate HudTournamentSetup	Position	"c-90 -100"	Spline 0.001 0.2
+}
+
+// custom door manipulation anims for casting
+event mudhud_closedoors
+{
+	SetVisible	MatchDoors	1	0
+	SetVisible	FrontParticlePanel	1	0
+
+	RunEventChild MatchDoors PlayDoorCloseAnim 0
+	RunEventChild FrontParticlePanel PlayDoorSlamParticles 0.45
+}
+
+event mudhud_closedoors_withteams
+{
+	SetVisible	MatchDoors	1	0
+	SetVisible	BlueTeamPanel	1	0
+	SetVisible	RedTeamPanel	1	0
+
+	RunEventChild MatchDoors PlayDoorCloseAnim 0
+	RunEventChild FrontParticlePanel PlayDoorSlamParticles 0.45
+
+	RunEvent HudTournament_AnimateTeams_In 0.25
+}
+
+event mudhud_showteams
+{
+	SetVisible	BlueTeamPanel	1	0
+	SetVisible	RedTeamPanel	1	0
+	RunEvent HudTournament_AnimateTeams_In 0
+}
+
+// opens match doors opened by either close animation, as well as moves the team panels out.
+event mudhud_opendoors
+{
+	RunEventChild MatchDoors PlayDoorOpenAnim 0
+	RunEvent HudTournament_AnimateTeams_Out 0.70
+	RunEvent HudTournament_DoorsCleanup 2
+}
+
+event TrainingHudBounce
+{
+	Animate ObjectiveStatusTraining	Position		"c-160 r140"		Linear 0 0
+	Animate ObjectiveStatusTraining	Position		"c-160 r112"		Bounce 0.0 2.0
+}

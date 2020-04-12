@@ -35,11 +35,11 @@
 	{
 		"ControlName"			"CExLabel"
 		"fieldName"				"ItemEffectMeterLabel"
-		"xpos"					"c-20"
-		"ypos"					"395"
-		"zpos"					"2"
-		"wide"					"41"
-		"tall"					"15"
+		"xpos"					"c-43"
+		"ypos"					"385"
+		"zpos"					"5"
+		"wide"					"86"
+		"tall"					"16"
 		"autoResize"			"1"
 		"pinCorner"				"2"
 		"visible"				"1"
@@ -50,7 +50,22 @@
 		"dulltext"				"0"
 		"brighttext"			"0"
 		"font"					"RobotoCondensedBold12"
-		"fgcolor_override"				"Black_Custom"
+		"fgcolor_override"				"200 255 200 255"
+	}
+	"ItemEffectMeterLabelColorOverlay" //Since we cannot change the color of the bars or the text, sandwich an overlay between them that dulls the charge bar.
+	{								   //This one is very slightly tinted green, other bars are tinted other colors to help create visual contrast at a glance.
+		"ControlName"			"ImagePanel" //The only problem with this are bars that turn red, like banners and mmph, are also slightly darkened, but this isn't really a HUGE deal.
+		"fieldName"				"ItemEffectMeterLabelColorOverlay"
+		"xpos"					"c-43"
+		"ypos"					"389"
+		"zpos"					"3"
+		"wide"					"86"
+		"tall"					"8"
+		"autoResize"			"1"
+		"pinCorner"				"2"
+		"visible"				"1"
+		"enabled"				"1"
+		"fillcolor"				"50 0 0 175"
 	}
 
 	"ItemEffectMeter"
@@ -59,7 +74,7 @@
 		"fieldName"				"ItemEffectMeter"
 		"font"					"Default"
 		"xpos"					"c-43"
-		"ypos"					"399"
+		"ypos"					"389"
 		"zpos"					"2"
 		"wide"					"86"
 		"tall"					"8"				
@@ -70,7 +85,7 @@
 		"textAlignment"			"Left"
 		"dulltext"				"0"
 		"brighttext"			"0"
-		"fgcolor_override"		"White_Custom"
-		"bgcolor_override"		"0 0 0 70"		
+		"fgcolor_override"		"255 255 255 255" //this does nothing
+		"bgcolor_override"		"0 0 0 0"		
 	}					
 }

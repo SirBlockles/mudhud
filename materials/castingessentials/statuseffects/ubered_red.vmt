@@ -1,0 +1,13 @@
+"UnlitGeneric"
+{
+	"$basetexture" "castingessentials/statuseffects/uberoverlay_red"
+	"Proxies"
+	{
+		"AnimatedTexture"
+		{
+			"animatedtexturevar" "$basetexture"
+			"animatedtextureframenumvar" "$frame"
+			"animatedtextureframerate" "60"
+		}
+	}
+}

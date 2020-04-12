@@ -19,8 +19,8 @@
 	{
 		"ControlName"	"CExLabel"
 		"fieldName"		"MapInfoTitle"
-		"xpos"			"c-180"
-		"ypos"			"105"
+		"xpos"			"c-225"
+		"ypos"			"25"
 		"zpos"			"1"
 		"wide"			"225"
 		"tall"			"24"
@@ -38,8 +38,8 @@
 	{
 		"ControlName"	"CExLabel"
 		"fieldName"		"MapInfoType"
-		"xpos"			"c-180"
-		"ypos"			"125"
+		"xpos"			"c-225"
+		"ypos"			"45"
 		"zpos"			"1"
 		"wide"			"225"
 		"tall"			"24"
@@ -58,11 +58,11 @@
 		"ControlName"	"CExRichText"
 		"fieldName"		"MapInfoText"
 		"font"			"RobotoCondensedRegular16"
-		"xpos"			"c-184"
-		"ypos"			"160"
+		"xpos"			"c-230"
+		"ypos"			"75"
 		"zpos"			"3"
-		"wide"			"195"
-		"tall"			"200"
+		"wide"			"460"
+		"tall"			"350"
 		"autoResize"	"3"
 		"pinCorner"		"0"
 		"visible"		"1"
@@ -70,6 +70,18 @@
 		"paintborder"	"0"
 		"textAlignment"	"northwest"
 		"fgcolor"		"White_Custom"
+	}
+	
+	"TextBG"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"TextBG"
+		"xpos"			"c-230"
+		"ypos"			"75"
+		"zpos"			"1"
+		"wide"			"460"
+		"tall"			"350"
+		"fillcolor"	"0 0 0 75"
 	}
 	
 	"MapImage"
@@ -81,8 +93,8 @@
 		"zpos"			"2"
 		"wide"			"0"
 		"tall"			"0"
-		"visible"		"0"
-		"enabled"		"0"
+		"visible"		"1"
+		"enabled"		"1"
 		"image"			""
 		"scaleImage"	"1"		
 	}
@@ -202,37 +214,5 @@
 		"image"			"loadout_bottom_gradient"
 		"tileImage"		"1"
 		"PaintBackgroundType"	"0"
-	}	
-
-	"Footer" [$X360]
-	{
-		"ControlName"		"CTFFooter"
-		"fieldName"			"Footer"
-		"zpos"				"6"
-		"tall"				"80"
-		"button_separator"	"10"
-		"button_separator_lodef"	"5"
-		"buttongap"			"50"
-		"textadjust"		"3"
-		"buttonoffsety"		"20"
-		"buttonoffsety_hidef"		"0"
-		"buttonoffsety_lodef"		"18"
-		"fonttext"			"MatchmakingDialogMenuLarge"
-		"fonttext_lodef"			"MatchmakingDialogMenuSmall"
-		"fgcolor"			"HudOffWhite" 	
-		
-		"button"
-		{
-			"name"		"intro"
-			"text"		"#TF_WatchIntro_360"
-			"icon"		"#GameUI_Icons_Y_BUTTON"	
-		}
-		
-		"button"
-		{
-			"name"		"continue"
-			"text"		"#TF_Continue_360"
-			"icon"		"#GameUI_Icons_A_BUTTON"	
-		}
 	}	
 }

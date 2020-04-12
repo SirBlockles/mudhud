@@ -51,12 +51,12 @@ Scheme
 		"QuestMap_InactiveGrey"	"100 100 100 255"
 		"QuestMap_BGImages"	"56 58 60 255"
 
-		"PartyMember1"	"124 173 255 255"
-		"PartyMember2"	"99  232 167 255"
-		"PartyMember3"	"229 255 121 255"
-		"PartyMember4"	"232 184 99  255"
-		"PartyMember5"	"255 118 108 255"
-		"PartyMember6"	"255 133 255 255"
+		"PartyMember1"	"254 38 39 255"
+		"PartyMember2"	"69 109 255 255"
+		"PartyMember3"	"250 187 11 255"
+		"PartyMember4"	"35 156 59  255"
+		"PartyMember5"	"255 100 29 255"
+		"PartyMember6"	"47 232 226 255"
 		
 		"White"				"235 235 235 255"
 		"Red"				"192 28 0 140"
@@ -320,9 +320,9 @@ Scheme
 
 		ListPanel.TextColor					"Orange"
 		ListPanel.BgColor					"TransparentBlack"
-		ListPanel.SelectedTextColor			"Black"
-		ListPanel.SelectedBgColor			"Red"
-		ListPanel.SelectedOutOfFocusBgColor	"Red"
+		ListPanel.SelectedTextColor			"255 255 255 255"
+		ListPanel.SelectedBgColor			"128 128 128 185"
+		ListPanel.SelectedOutOfFocusBgColor	"0 255 0 255"
 		ListPanel.EmptyListInfoTextColor	"Orange"
 
 		Menu.TextColor					"TanLight"
@@ -2936,12 +2936,12 @@ Scheme
 		//
 		// all custom font definitions for VoloHUD
 		
-		"Shapes"
+		Crosshair
 		{
 			"1"
 			{
-				"name"		"Blocks"
-				"tall"		"64"
+				"name"		"KnucklesCrosses"
+				"tall"		"18"
 				"additive"	"0"
 				"antialias" "1"
 			}
@@ -3207,6 +3207,16 @@ Scheme
 			}
 		}
 		
+		RobotoBold20
+		{
+			"1"
+			{
+				"name"		"Roboto Bold"
+				"tall"		"20"
+				"antialias"	"1"
+			}
+		}
+		
 		RobotoBold24
 		{
 			"1"
@@ -3416,6 +3426,16 @@ Scheme
 				"antialias"	"1"
 			}
 		}
+
+		RobotoCondensedBold14
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"14"
+				"antialias"	"1"
+			}
+		}
 		
 		RobotoCondensedBold16
 		{
@@ -3433,6 +3453,26 @@ Scheme
 			{
 				"name"		"Roboto Condensed Bold"
 				"tall"		"18"
+				"antialias"	"1"
+			}
+		}
+		
+		RobotoCondensedBold20
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"20"
+				"antialias"	"1"
+			}
+		}
+		
+		RobotoCondensedBold22
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Bold"
+				"tall"		"22"
 				"antialias"	"1"
 			}
 		}
@@ -3777,6 +3817,16 @@ Scheme
 			}
 		}
 		
+		RobotoCondensedLight28
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Light"
+				"tall"		"28"
+				"antialias"	"1"
+			}
+		}
+		
 		RobotoCondensedLight32
 		{
 			"1"
@@ -3957,6 +4007,40 @@ Scheme
 			}
 		}
 		
+		RobotoCondensedRegular8_quest
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"8"
+				"weight"	"0"
+				"additive"	"1"
+				"antialias"	"1"
+			}
+		}
+		"RobotoCondensedRegular8_questglow"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"8"
+				"weight"	"0"
+				"antialias" "1"
+			}
+		}
+		"RobotoCondensedRegular8_questblur"
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"8"
+				"weight"	"0"
+				"blur"		"3"
+				"additive"	"1"
+				"antialias"	"1"
+			}
+		}
+		
 		RobotoCondensedRegular10
 		{
 			"1"
@@ -3983,6 +4067,26 @@ Scheme
 			{
 				"name"		"Roboto Condensed Regular"
 				"tall"		"16"
+				"antialias"	"1"
+			}
+		}
+		
+		RobotoCondensedRegular18
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"18"
+				"antialias"	"1"
+			}
+		}
+		
+		RobotoCondensedRegular20
+		{
+			"1"
+			{
+				"name"		"Roboto Condensed Regular"
+				"tall"		"20"
 				"antialias"	"1"
 			}
 		}
@@ -4933,6 +5037,26 @@ Scheme
 			{
 				"name"		"Roboto Thin Italic"
 				"tall"		"64"
+				"antialias"	"1"
+			}
+		}
+		
+		hitnum
+		{
+			"1"
+			{
+				"name"		"Neou"
+				"tall"		"24"
+				"antialias"	"1"
+			}
+		}
+		
+		classicons
+		{
+			"1"
+			{
+				"name"		"ToonHUD Icons"
+				"tall"		"14"
 				"antialias"	"1"
 			}
 		}
@@ -7773,6 +7897,26 @@ Scheme
 		"25"
 		{	"font"	"resource/fonts/Blocks.ttf"
 			"name"	"Blocks"
+		}
+		"26"
+		{
+			"font"	"resource/fonts/Neou-Bold.ttf"
+			"name"	"Neou"
+		}
+		"27"
+		{
+			"font"	"resource/fonts/ToonHUDIcons.ttf"
+			"name"	"ToonHUD Icons"
+		}
+		"28"
+		{
+			"font"	"resource/fonts/KnucklesCrosses.ttf"
+			"name"	"KnucklesCrosses"
+		}
+		"29" //alternate pixel font for damage numbers
+		{
+			"font"	"resource/fonts/debugme.ttf"
+			"name"	"International Font of Mystery"
 		}
 	}
 }

@@ -2,42 +2,35 @@
 {	
 	"TimePanelBG"
 	{
-		"ControlName"		"ScalableImagePanel"
+		"ControlName"		"ImagePanel"
 		"fieldName"		"TimePanelBG"
-		"xpos"			"43"
-		"ypos"			"12"
+		"xpos"			"0"
+		"ypos"			"0"
 		"zpos"			"2"
-		"wide"			"25"
-		"tall"			"3"
+		"wide"			"f0"
+		"tall"			"30"
 		"visible"		"1"
 		"enabled"		"1"
 		"scaleImage"	"1"
 		
-		"image"			"../hud/objectives_timepanel_blue_bg"	
-		
-		"src_corner_height"		"23"				// pixels inside the image
-		"src_corner_width"		"23"
-		
-		"draw_corner_width"		"0"				// screen size of the corners ( and sides ), proportional
-		"draw_corner_height" 	"0"
-		
+		"image"			""
+		"fillcolor"		"75 75 75 185"
 		if_match
 		{
-			"wide"			"0"
-			"visible"		"0"
+			"visible"		"1"
 		}
 	}
 	"TimePanelProgressBar"
 	{
 		"ControlName"			"CTFProgressBar"
 		"fieldName"			"TimePanelProgressBar"
-		"xpos"				"67"
-		"ypos"				"16"
+		"xpos"				"60"
+		"ypos"				"600"
 		"zpos"				"4"	
 		"wide"				"20"
 		"tall"				"20"
-		"visible"			"0"
-		"enabled"			"0"
+		"visible"			"1"
+		"enabled"			"1"
 		"scaleImage"			"1"
 		"image"				"../hud/objectives_timepanel_progressbar"
 		"color_active"			"TimerProgress.Active"
@@ -47,34 +40,30 @@
 		
 		if_match
 		{
-			"wide"			"0"
-			"visible"		"0"
+			"visible"		"1"
+			"xpos"			"46"
+			"wide"			"15"
+			"tall"			"15"
 		}
 	}
 	"WaitingForPlayersLabel"
 	{
 		"ControlName"		"CExLabel"
 		"fieldName"		"WaitingForPlayersLabel"
-		"xpos"			"16"
-		"ypos"			"23"
+		"xpos"			"0"
+		"ypos"			"31"
 		"zpos"			"5"
-		"wide"			"78"
-		"tall"			"19"
-		"visible"		"0"
+		"wide"			"60"
+		"tall"			"12"
+		"visible"		"1"
 		"enabled"		"1"
-		"labelText"		"#game_WaitingForPlayers"
+		"labelText"		"PRE-GAME"
 		"textAlignment"		"center"
 		"dulltext"		"0"
 		"brighttext"		"0"
 		"wrap"			"0"
-		"font"			"RobotoCondensedBold12"
+		"font"			"RobotoCondensedRegular12"
 		"fgcolor"		"White_Custom"
-		
-		if_match
-		{
-			"wide"			"0"
-			"visible"		"0"
-		}
 	}			
 	"WaitingForPlayersBG"
 	{
@@ -100,14 +89,14 @@
 	{
 		"ControlName"		"CExLabel"
 		"fieldName"		"OvertimeLabel"
-		"xpos"			"16"
-		"ypos"			"23"
+		"xpos"			"0"
+		"ypos"			"20"
 		"zpos"			"5"
-		"wide"			"78"
-		"tall"			"19"
+		"wide"			"60"
+		"tall"			"12"
 		"visible"		"0"
 		"enabled"		"1"
-		"labelText"		"#game_Overtime"
+		"labelText"		"OVERTIME"
 		"textAlignment"		"center"
 		"dulltext"		"0"
 		"brighttext"		"0"
@@ -117,7 +106,6 @@
 		
 		if_match
 		{
-			"wide"			"0"
 			"visible"		"0"
 		}
 	}			
@@ -190,11 +178,11 @@
 	{
 		"ControlName"	"CExLabel"
 		"fieldName"		"SetupLabel"
-		"xpos"			"17"
-		"ypos"			"23"
+		"xpos"			"15"
+		"ypos"			"20"
 		"zpos"			"5"
-		"wide"			"78"
-		"tall"			"19"
+		"wide"			"30"
+		"tall"			"12"
 		"visible"		"0"
 		"enabled"		"1"
 		"labelText"		"#game_Setup"
@@ -202,44 +190,33 @@
 		"dulltext"		"0"
 		"brighttext"		"0"
 		"wrap"			"0"
-		"font"			"RobotoCondensedBold12"
+		"font"			"RobotoCondensedLight12"
 		"fgcolor"		"White_Custom"
-		
-		if_match
-		{
-			"wide"			"0"
-			"visible"		"0"
-		}
 	}	
 	"SetupBG"
 	{
-		"ControlName"		"CTFImagePanel"
+		"ControlName"		"ImagePanel"
 		"fieldName"		"SetupBG"
-		"xpos"			"16"
-		"ypos"			"31"
+		"xpos"			"15"
+		"ypos"			"30"
 		"zpos"			"1"
-		"wide"			"0"
-		"tall"			"0"
+		"wide"			"0" //30 to re-enable old pos
+		"tall"			"14"
 		"visible"		"0"
 		"enabled"		"0"
-		"image"			"../hud/objectives_timepanel_suddendeath"	
+		"image"			""
+		"fillColor"		"75 75 75 185"
 		"scaleImage"		"1"	
-		
-		if_match
-		{
-			"wide"			"0"
-			"visible"		"0"
-		}
 	}
 	"ServerTimeLimitLabel"
 	{
 		"ControlName"	"CExLabel"
 		"fieldName"		"ServerTimeLimitLabel"
-		"xpos"			"16"
-		"ypos"			"23"
+		"xpos"			"0"
+		"ypos"			"-3"
 		"zpos"			"5"
-		"wide"			"78"
-		"tall"			"19"
+		"wide"			"60"
+		"tall"			"12"
 		"visible"		"0"
 		"enabled"		"1"
 		"labelText"		"%servertimeleft%"
@@ -247,13 +224,12 @@
 		"dulltext"		"0"
 		"brighttext"		"0"
 		"wrap"			"0"
-		"font"			"RobotoCondensedBold12"
+		"font"			"RobotoCondensedLight12"
 		"fgcolor"		"White_Custom"
 		
 		if_match
 		{
-			"wide"			"0"
-			"visible"		"0"
+			"visible"		"1"
 		}
 	}	
 	"ServerTimeLimitLabelBG"

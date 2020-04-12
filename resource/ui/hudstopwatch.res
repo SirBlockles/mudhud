@@ -2,7 +2,7 @@
 {
 	"HudStopWatchBG"
 	{
-		"ControlName"		"ScalableImagePanel"
+		"ControlName"		"ImagePanel"
 		"fieldName"		"HudStopWatchBG"
 		"xpos"			"0"
 		"ypos"			"5"
@@ -11,16 +11,9 @@
 		"tall"			"31"
 		"autoResize"		"0"
 		"pinCorner"		"0"
-		"visible"		"0"
-		"enabled"		"0"
-		"image"			"../HUD/tournament_panel_brown"
-
-
-		"src_corner_height"	"23"				// pixels inside the image
-		"src_corner_width"	"23"
-		
-		"draw_corner_width"	"7"				// screen size of the corners ( and sides ), proportional
-		"draw_corner_height" 	"7"	
+		"visible"		"1"
+		"enabled"		"1"
+		"image"			""
 	}
 
 	"StopWatchImageCaptureTime"
@@ -44,12 +37,12 @@
 	{
 		"ControlName"			"EditablePanel"
 		"fieldName"			"ObjectiveStatusTimePanel"
-		"xpos"				"20"
-		"ypos"				"-3"
+		"xpos"				"c-30"
+		"ypos"				"30"
 		"zpos"				"1"
-		"wide"				"110"
-		"tall"				"150"
-		"visible"			"0"
+		"wide"				"60"
+		"tall"				"25"
+		"visible"			"1"
 		"enabled"			"1"
 
 		"TimePanelValue"
@@ -58,15 +51,47 @@
 			"fieldName"		"TimePanelValue"
 			"font"			"RobotoCondensedBold16"
 			"fgcolor"		"White_Custom"
-			"xpos"			"68"
-			"ypos"			"20"
+			"xpos"			"0"
+			"ypos"			"9"
 			"zpos"			"3"
-			"wide"			"45"
-			"tall"			"31"
+			"wide"			"60"
+			"tall"			"16"
 			"visible"		"1"
 			"enabled"		"1"
 			"textAlignment"		"center"
-		}	
+			"labelText"		"-:--"
+		}
+		"StopWatchPointsLabelIn" //the word "in" since we can't just do "%pointslabel% in" for the above text
+		{
+			"ControlName"		"CExLabel"
+			"fieldName"		"StopWatchPointsLabelIn"
+			"font"			"RobotoCondensedRegular12"
+			"fgcolor"		"White_Custom"
+			"labelText"		"in"
+			"textAlignment"		"east"
+			"xpos"			"34"
+			"ypos"			"-2"
+			"zpos"			"4"
+			"wide"			"16"
+			"tall"			"17"
+			"autoResize"		"0"
+			"pinCorner"		"0"
+			"visible"		"1"
+			"enabled"		"1"
+			"wrap"			"0"
+		}
+		"LineAccent"
+		{
+			"ControlName"	"ImagePanel"
+			"fieldName"		"LineAccent"
+			"xpos"			"0"
+			"ypos"			"0"
+			"wide"			"60"
+			"tall"			"1"
+			"visible"		"0" //line at top of stopwatch panel. just makes it look sloppily misaligned.
+			"enabled"		"1"
+			"fillColor"		"75 75 75 125"
+		}
 	}
 
 	"StopWatchScoreToBeat"
@@ -76,12 +101,12 @@
 		"font"			"RobotoCondensedBold16"
 		"fgcolor"		"White_Custom"
 		"labelText"		"%scoretobeat%"
-		"textAlignment"		"east"
-		"xpos"			"115"
-		"ypos"			"1"
+		"textAlignment"		"west"
+		"xpos"			"c-20"
+		"ypos"			"28"
 		"zpos"			"4"
-		"wide"			"93"
-		"tall"			"30"
+		"wide"			"12"
+		"tall"			"16"
 		"autoResize"		"0"
 		"pinCorner"		"0"
 		"visible"		"0"
@@ -91,15 +116,15 @@
 	{
 		"ControlName"		"CExLabel"
 		"fieldName"		"StopWatchPointsLabel"
-		"font"			"RobotoCondensedBold16"
+		"font"			"RobotoCondensedRegular12"
 		"fgcolor"		"White_Custom"
 		"labelText"		"%pointslabel%"
-		"textAlignment"		"east"
-		"xpos"			"120"
-		"ypos"			"1"
+		"textAlignment"		"center"
+		"xpos"			"cs-0.5"
+		"ypos"			"28"
 		"zpos"			"4"
-		"wide"			"120"
-		"tall"			"30"
+		"wide"			"60"
+		"tall"			"16"
 		"autoResize"		"0"
 		"pinCorner"		"0"
 		"visible"		"1"
@@ -111,20 +136,24 @@
 	{
 		"ControlName"		"CExLabel"
 		"fieldName"		"StopWatchLabel"
-		"font"			"RobotoCondensedBold16"
+		"font"			"RobotoCondensedRegular12"
 		"fgcolor"		"White_Custom"
 		"labelText"		"%stopwatchlabel%"
-		"textAlignment"		"west"
-		"xpos"			"25"
-		"ypos"			"5"
+		"textAlignment"		"center"
+		"xpos"			"cs-0.5"
+		"ypos"			"37"
 		"zpos"			"4"
-		"wide"			"90"
-		"tall"			"30"
+		"wide"			"150"
+		"tall"			"12"
 		"autoResize"		"0"
 		"pinCorner"		"0"
 		"visible"		"0"
 		"enabled"		"1"
-		"wrap"			"1"
+		"wrap"			"0"
+		if_match
+		{
+			"ypos"		"40"
+		}
 	}
 
 	"HudStopWatchDescriptionBG"

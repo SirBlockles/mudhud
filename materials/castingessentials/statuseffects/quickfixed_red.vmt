@@ -1,0 +1,8 @@
+"UnlitGeneric"
+{
+	"$basetexture" "castingessentials/statuseffects/uberoverlay_red"
+	"$translucent" 1
+	"$ignorez" 1
+
+	$color "{188 66 66}"
+}

@@ -38,30 +38,37 @@
 			"ControlName"	"CItemModelPanel"
 			"xpos"			"c-70"
 			"ypos"			"270"
+			"zpos"			"10"
 			"wide"			"140"
 			"tall"			"70"
 			"visible"		"0"
+			"font"			"RobotoCondensedBold16"
 			"bgcolor_override"		"0 0 0 0"
 			"noitem_textcolor"		"117 107 94 255"
 			"PaintBackgroundType"	"2"
 			"paintborder"	"1"
 			
+			"model_center_x""1"
 			"model_ypos"	"5"
 			"model_tall"	"55"
+			"model_wide"	"90"
+			"model_ypos"	"5"
+			"model_tall"	"60"
 			"text_ypos"		"54"
 			"text_center"	"1"
 			"name_only"		"1"
 			
-			"attriblabel"
+			"namelabel"
 			{
-				"font"			"ItemFontAttribLarge"
-				"visible"		"0"
+				"font"			"RobotoCondensedBold12"
+				"visible"		"1"
 			}
 			
 			"itemmodelpanel"
 			{
 				"use_item_rendertarget" "0"
 				"allow_rot"				"0"
+				"inventory_image_type"	"1"
 			}
 		}
 
@@ -92,8 +99,8 @@
 	{
 		"ControlName"		"CExLabel"
 		"fieldName"		"CaratLabel"
-		"font"			"HudFontSmallestBold"
-		"labelText"		">>"
+		"font"			"RobotoBlack24"
+		"labelText"		"Weapons"
 		"textAlignment"	"west"
 		"xpos"			"c-300"
 		"ypos"			"20"
@@ -146,7 +153,7 @@
 		"ControlName" "CExLabel"
 		"fieldName" "TauntCaratLabel"
 		"font" "HudFontSmallestBold"
-		"labelText" ">>"
+		"labelText" "Taunts"
 		"textAlignment" "west"
 		"xpos" "c-150"
 		"ypos" "20"
@@ -350,7 +357,7 @@
 		"zpos"			"10000"
 		"wide"			"250"
 		"tall"			"160"
-		"visible"		"0"
+		"visible"		"1"
 		"PaintBackgroundType"	"2"
 		"paintbackground" "0"
 		"border"		"MainMenuHighlightBorder"

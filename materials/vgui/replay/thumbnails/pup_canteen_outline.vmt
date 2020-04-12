@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "vgui/replay/thumbnails/pup_canteen_outline"
+	"$nolod" 1
+	"$translucent" 1
+}

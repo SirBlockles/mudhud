@@ -8,14 +8,14 @@
 		"presetbutton_kv"
 		{
 			"zpos"			"20"
-			"wide"			"25"
-			"tall"			"25"
+			"wide"			"14"
+			"tall"			"40"
 			"autoResize"	"0"
 			"pinCorner"		"0"
 			"visible"		"0"
 			"enabled"		"1"
 			"tabPosition"	"0"
-			"font"			"RobotoCondensedBold16"
+			"font"			"RobotoCondensedLight24"
 			"textAlignment"	"center"
 			"textinsetx"	"0"
 			"dulltext"		"0"
@@ -23,7 +23,7 @@
 			"Command"		""
 			"sound_depressed"	"UI/buttonclick.wav"
 			"sound_released"	"UI/buttonclickrelease.wav"
-			"centerwrap"	"1"
+			"centerwrap"	"0"
 		}			
 	}
 }

@@ -6,7 +6,7 @@
 		"ControlName"	"EditablePanel"
 		"fieldName"		"HudPlayerClass"
 		"xpos"			"0"		//0
-		"ypos"			"18"	//18
+		"ypos"			"0"	//18
 		"zpos"			"1"
 		"wide"			"f0"
 		"tall"			"480"
@@ -17,11 +17,11 @@
 	{
 		"ControlName"	"CTFClassImage"
 		"fieldName"		"PlayerStatusClassImage"
-		"xpos"			"12"
-		"ypos"			"r50"
+		"xpos"			"16"
+		"ypos"			"r48"
 		"zpos"			"2"
-		"wide"			"32"
-		"tall"			"32"
+		"wide"			"48"
+		"tall"			"48"
 		"visible"		"1"
 		"enabled"		"1"
 		"image"			"../hud/class_scoutred"
@@ -31,11 +31,11 @@
 	{
 		"ControlName"	"CTFImagePanel"
 		"fieldName"		"PlayerStatusSpyImage"
-		"xpos"			"3"
-		"ypos"			"r67"
-		"zpos"			"2"
-		"wide"			"0"
-		"tall"			"0"
+		"xpos"			"48"
+		"ypos"			"r32"
+		"zpos"			"3"
+		"wide"			"32"
+		"tall"			"32"
 		"visible"		"1"
 		"enabled"		"1"
 		"image"			"../hud/class_spyred"
@@ -57,50 +57,50 @@
 		"image"			"../hud/class_spy_outline"
 		"scaleImage"	"1"	
 	}		
-	"PlayerStatusClassImageBG"
-	{
+	"PlayerStatusClassImageBG" //The old way of having the team-colored HP cross outline, was to use this element as a team-colored way to do it. Problem is, sv_pure doesn't like it at all.
+	{						   //The old values are commented, if you want to see what it was like. Exact positions may be subject to change in hud revisions.
 		"ControlName"	"CTFImagePanel"
 		"fieldName"		"PlayerStatusClassImageBG"
-		"xpos"          "r14"  
-        "ypos"          "r32"
-        "zpos"          "51"
-        "wide"          "14"
-        "tall"          "14"
+		"xpos"			"999" //c-214 is old value
+		"ypos"			"999" //337 is old value
+        "zpos"          "50"
+        "wide"          "22"
+        "tall"          "22"
 		"visible"		"1"
 		"enabled"		"1"
-		"scaleImage"	"1"	
+		"scaleImage"	"1"
 		"teambg_1"		"../hud/color_panel_brown"
-		"teambg_2"      "../hud/color_panel_red"
-        "teambg_3"      "../hud/color_panel_blu"
+		"teambg_2"      "../vgui/logos/ui/healthred"
+        "teambg_3"      "../vgui/logos/ui/healthblu"
 		
-		"src_corner_height"	"23"				// pixels inside the image
-		"src_corner_width"	"23"
+		"src_corner_height"	"0"				// pixels inside the image
+		"src_corner_width"	"0"
 		
 		"draw_corner_width"	"0"				// screen size of the corners ( and sides ), proportional
 		"draw_corner_height" 	"0"			
 	}
 
-	"classmodelpanelBG"
+	"classmodelpanelBG"		//this is same as above, but when you use 3D playermodel instead of 2D class portraits
 	{
 		"ControlName"	"CTFImagePanel"
 		"fieldName"		"classmodelpanelBG"
-		"xpos"			"0"	
-		"ypos"			"r40"
-		"zpos"			"1"		
-		"wide"			"50"
-		"tall"			"19"
+		"xpos"			"c-110" //c-214
+		"ypos"			"367" //337
+        "zpos"          "100"
+        "wide"          "45"
+        "tall"          "4"
 		"visible"		"1"
 		"enabled"		"1"
 		"scaleImage"	"1"
 		"teambg_1"		"../hud/color_panel_brown"
-		"teambg_2"      "../hud/color_panel_red"
-        "teambg_3"      "../hud/color_panel_blu"
+		"teambg_2"      "../vgui/replay/thumbnails/redbg"
+        "teambg_3"      "../vgui/replay/thumbnails/blubg"
 		
-		"src_corner_height"	"23"				// pixels inside the image
-		"src_corner_width"	"23"
+		"src_corner_height"	"0"				// pixels inside the image
+		"src_corner_width"	"0"
 		
 		"draw_corner_width"	"0"				// screen size of the corners ( and sides ), proportional
-		"draw_corner_height" 	"0"			
+		"draw_corner_height" 	"0"				
 	}
 
 	"classmodelpanel"
@@ -108,10 +108,10 @@
 		"ControlName"	"CTFPlayerModelPanel"
 		"fieldName"		"classmodelpanel"
 		
-		"xpos"			"0"
-		"ypos"			"r88"
+		"xpos"			"c-112"
+		"ypos"			"265"
 		"zpos"			"2"		
-		"wide"			"52"
+		"wide"			"100"
 		"tall"			"102"
 		"autoResize"	"0"
 		"pinCorner"		"0"
@@ -129,9 +129,9 @@
 			"angles_x" "0"
 			"angles_y" "270"
 			"angles_z" "0"
-			"origin_x" "200"
-			"origin_y" "28"
-			"origin_z" "-60"
+			"origin_x" "0"
+			"origin_y" "0"
+			"origin_z" "0"
 			"frame_origin_x"	"0"
 			"frame_origin_y"	"0"
 			"frame_origin_z"	"0"
@@ -147,63 +147,63 @@
 			}
 			"Scout"
 			{
-				"fov"			"27"
+				"fov"			"23"
 				"angles_x"		"0"
 				"angles_y"		"270"
-				"angles_z"		"-10"
-				"origin_x"		"105"
-				"origin_y"		"15"
-				"origin_z"		"-47"
+				"angles_z"		"0"
+				"origin_x"		"185"
+				"origin_y"		"20"
+				"origin_z"		"-72"
 			}
 			"Sniper"
 			{
-				"fov"			"30"
-				"angles_x"		"-2"
+				"fov"			"23"
+				"angles_x"		"0"
 				"angles_y"		"270"
 				"angles_z"		"0"
-				"origin_x"		"130"
-				"origin_y"		"15"
-				"origin_z"		"-47"	//-67
+				"origin_x"		"200"
+				"origin_y"		"20"
+				"origin_z"		"-85"
 			}
 			"Soldier"
 			{
-				"fov"			"27"
+				"fov"			"23"
 				"angles_x"		"0"
-				"angles_y"		"260"
+				"angles_y"		"270"
 				"angles_z"		"0"
-				"origin_x"		"150"
-				"origin_y"		"24"
-				"origin_z"		"-52"
+				"origin_x"		"200"
+				"origin_y"		"25"
+				"origin_z"		"-76"
 			}
 			"Demoman"
 			{
-				"fov"			"28"
+				"fov"			"23"
 				"angles_x"		"0"
 				"angles_y"		"270"
 				"angles_z"		"0"
-				"origin_x"		"138"
-				"origin_y"		"20"
-				"origin_z"		"-55"
+				"origin_x"		"200"
+				"origin_y"		"24"
+				"origin_z"		"-77"
 			}
 			"Medic"
 			{
-				"fov"			"22"
-				"angles_x"		"6"
-				"angles_y"		"270"
-				"angles_z"		"0"
-				"origin_x"		"150"
-				"origin_y"		"15"
-				"origin_z"		"-57"
-			}
-			"Heavy"
-			{
-				"fov"			"20"
+				"fov"			"23"
 				"angles_x"		"0"
 				"angles_y"		"270"
 				"angles_z"		"0"
 				"origin_x"		"200"
 				"origin_y"		"15"
-				"origin_z"		"-55"
+				"origin_z"		"-82"
+			}
+			"Heavy"
+			{
+				"fov"			"23"
+				"angles_x"		"0"
+				"angles_y"		"270"
+				"angles_z"		"0"
+				"origin_x"		"200"
+				"origin_y"		"22"
+				"origin_z"		"-75"
 			}
 			"Pyro"
 			{
@@ -211,9 +211,9 @@
 				"angles_x"		"0"
 				"angles_y"		"270"
 				"angles_z"		"0"
-				"origin_x"		"175"
-				"origin_y"		"22"
-				"origin_z"		"-50"
+				"origin_x"		"200"
+				"origin_y"		"24"
+				"origin_z"		"-72"
 			}
 			"Spy"
 			{
@@ -221,9 +221,9 @@
 				"angles_x"		"0"
 				"angles_y"		"270"
 				"angles_z"		"0"
-				"origin_x"		"160"
-				"origin_y"		"15"
-				"origin_z"		"-60"
+				"origin_x"		"200"
+				"origin_y"		"25"
+				"origin_z"		"-81"
 			}
 			"Engineer"
 			{
@@ -231,9 +231,9 @@
 				"angles_x"		"0"
 				"angles_y"		"270"
 				"angles_z"		"0"
-				"origin_x"		"160"
-				"origin_y"		"15"
-				"origin_z"		"-52"
+				"origin_x"		"200"
+				"origin_y"		"28"
+				"origin_z"		"-78"
 			}
 		}
 	}

@@ -69,8 +69,22 @@
 		"textAlignment"			"Left"
 		"dulltext"				"0"
 		"brighttext"			"0"
-	}					
-	
+	}
+	"ItemEffectMeterLabelColorOverlay"
+	{
+		"ControlName"			"ImagePanel"
+		"fieldName"				"ItemEffectMeterLabelColorOverlay"
+		"xpos"					"c-3"
+		"ypos"					"389"
+		"zpos"					"3"
+		"wide"					"86"
+		"tall"					"8"
+		"autoResize"			"1"
+		"pinCorner"				"2"
+		"visible"				"1"
+		"enabled"				"1"
+		"fillcolor"				"0 50 0 175"
+	}
 	"ItemEffectMeterCount"
 	{
 		"ControlName"			"CExLabel"
@@ -90,5 +104,6 @@
 		"brighttext"			"0"
 		"font"					"RobotoCondensedBold24"
 		"fgcolor_override"		"White_Custom"
+		"bgcolor_override"		"0 0 0 0"
 	}
 }

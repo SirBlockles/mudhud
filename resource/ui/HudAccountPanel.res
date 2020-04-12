@@ -2,13 +2,13 @@
 {
 	"CHudAccountPanel"
 	{
-		"delta_item_x"			"100"
-		"delta_item_start_y"	"93"
-		"delta_item_end_y"		"93"
-		"PositiveColor"			"50 225 50 255"
-		"NegativeColor"			"255 20 20 255"
-		"delta_lifetime"		"0.6"
-		"delta_item_font"		"surface24"
+		"delta_item_x"			"68"
+		"delta_item_start_y"	"999"
+		"delta_item_end_y"		"999"
+		"PositiveColor"			"0 225 0 255"
+		"NegativeColor"			"255 0 0 255"
+		"delta_lifetime"		"1.2"
+		"delta_item_font"		"RobotoBold16"
 		
 	}
 	
@@ -33,13 +33,13 @@
 	{
 		"ControlName"	"CIconPanel"
 		"fieldName"		"MetalIcon"
-		"xpos"			"45"
-		"ypos"			"90"
+		"xpos"			"75"
+		"ypos"			"40"
 		"zpos"			"1"
 		"wide"			"10"
 		"tall"			"10"
-		"visible"		"0"
-		"enabled"		"0"
+		"visible"		"0" //set to 1 to enable the little wrench icon
+		"enabled"		"1"
 		"scaleImage"	"1"	
 		"icon"			"ico_metal"
 		"iconColor"		"255 255 255 255"
@@ -50,10 +50,10 @@
 		"ControlName"	"CExLabel"
 		"fieldName"		"AccountValue"
 		"xpos"			"0"
-		"ypos"			"130"
+		"ypos"			"20"
 		"zpos"			"2"
 		"wide"			"160"
-		"tall"			"30"
+		"tall"			"20"
 		"autoResize"	"1"
 		"pinCorner"		"2"
 		"visible"		"1"
@@ -63,7 +63,7 @@
 		"textAlignment"	"center"
 		"dulltext"		"0"
 		"brighttext"	"0"
-		"font"			"RobotoBold24"
+		"font"			"RobotoBold20"
 		"fgcolor" "255 255 255 255"
 	}
 }

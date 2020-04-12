@@ -1,0 +1,24 @@
+// load the base configuration
+//exec default.cfg
+r_decal_cullsize 1
+
+// Setup custom controller
+exec joystick.cfg
+
+// run CastingEssentials & SpecTools required commands for functionality's sake.
+// running this through valve.rc allows any custom autoexec to run without requiring any modification,
+// because it runs just before this. Seamless for the user, unless they also have a custom valve.rc file.
+exec spec.cfg
+
+// run autoexec after spec file, so that any keybinds can be overridden if desired
+exec autoexec.cfg
+
+//
+// stuff command line statements
+//
+stuffcmds
+
+// display the startup level
+startupmenu
+
+sv_unlockedchapters 99

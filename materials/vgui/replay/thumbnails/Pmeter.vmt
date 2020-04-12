@@ -1,0 +1,6 @@
+"LightmappedGeneric"
+{
+	"$basetexture" "vgui/replay/thumbnails/Pmeter"
+	"$nolod" 1
+	"$translucent" 1
+}

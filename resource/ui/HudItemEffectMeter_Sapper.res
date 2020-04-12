@@ -35,11 +35,11 @@
 	{
 		"ControlName"			"CExLabel"
 		"fieldName"				"ItemEffectMeterLabel"
-		"xpos"					"c-21"
+		"xpos"					"c-43"
 		"ypos"					"375"
-		"zpos"					"2"
-		"wide"					"41"
-		"tall"					"15"
+		"zpos"					"5"
+		"wide"					"86"
+		"tall"					"16"
 		"autoResize"			"1"
 		"pinCorner"				"2"	
 		"visible"				"1"
@@ -52,7 +52,21 @@
 		"font"					"RobotoCondensedBold12"
 		"fgcolor_override"		"Black_Custom"
 	}
-
+	"ItemEffectMeterLabelColorOverlay"
+	{
+		"ControlName"			"ImagePanel"
+		"fieldName"				"ItemEffectMeterLabelColorOverlay"
+		"xpos"					"c-43"
+		"ypos"					"379"
+		"zpos"					"3"
+		"wide"					"86"
+		"tall"					"8"
+		"autoResize"			"1"
+		"pinCorner"				"2"
+		"visible"				"1"
+		"enabled"				"1"
+		"fillcolor"				"0 0 50 175"
+	}
 	"ItemEffectMeter"
 	{	
 		"ControlName"			"ContinuousProgressBar"
@@ -71,6 +85,6 @@
 		"dulltext"				"0"
 		"brighttext"			"0"
 		"fgcolor_override"		"White_Custom"
-		"bgcolor_override"		"0 0 0 70"		
-	}					
+		"bgcolor_override"		"0 0 0 0"		
+	}						
 }
