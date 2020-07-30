@@ -52,7 +52,7 @@
 		"ControlName"	"CExLabel"
 		"fieldName"		"CurrencyBad"
 		"font"			"RobotoCondensedBold16"
-		"fgcolor"		"255 255 255 255"
+		"fgcolor"		"255 100 100 255"
 		"xpos"			"0"
 		"ypos"			"0"
 		"zpos"			"4"

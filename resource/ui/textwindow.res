@@ -20,17 +20,17 @@
 	{
 		"ControlName"	"CExLabel"
 		"fieldName"		"TFMessageTitle"
-		"xpos"			"c-184"
-		"ypos"			"95"
+		"xpos"			"c-215"
+		"ypos"			"c-220"
 		"zpos"			"1"
-		"wide"			"420"
-		"tall"			"24"
+		"wide"			"430"
+		"tall"			"32"
 		"autoResize"	"0"
 		"pinCorner"		"0"
 		"visible"		"1"
 		"enabled"		"1"
 		"labelText"		"#TF_WELCOME"
-		"textAlignment"	"west"
+		"textAlignment"	"center"
 		"dulltext"		"0"
 		"brighttext"	"0"
 		"font"			"RobotoBold32"
@@ -41,8 +41,8 @@
 	{
 		"ControlName"	"TextEntry"
 		"fieldName"		"TextMessage"
-		"visible"		"0"
-		"enabled"		"0"
+		"visible"		"1"
+		"enabled"		"1"
 	}
 
 	"TFTextMessage"
@@ -50,11 +50,11 @@
 		"ControlName"	"CExRichText"
 		"fieldName"		"TFTextMessage"
 		"font"			"RobotoCondensedRegular16"
-		"xpos"			"c-184"
-		"ypos"			"125"
+		"xpos"			"c-250"
+		"ypos"			"c-180"
 		"zpos"			"1"
-		"wide"			"415"
-		"tall"			"240"
+		"wide"			"500"
+		"tall"			"369"
 		"autoResize"	"3"
 		"pinCorner"		"0"
 		"visible"		"1"
@@ -85,7 +85,7 @@
 	{
 		"ControlName"		"CExButton"
 		"fieldName"		"ok"
-		"xpos"			"r190"
+		"xpos"			"c100"
 		"ypos"			"r40"
 		"zpos"			"6"
 		"wide"			"150"
@@ -103,6 +103,11 @@
 		"command"		"okay"
 		"default"		"1"
 		"font"			"RobotoBold24"
+		
+		"defaultbgcolor_override"	"25 25 25 200"
+		"armedbgcolor_override"		"200 200 200 200"
+		"defaultfgcolor_override"	"255 255 255 255"
+		"armedfgcolor_override"		"0 0 0 255"
 	}
 	
 	"MenuBG"
@@ -133,6 +138,34 @@
 		}
 	}
 	
+	"BasicBGTitle" //i don't know if changing MenuBG to an imagepanel will play nice, given how other default BG panels tend to work, so let's just make our own.
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"BasicBGTitle" //separate panel for title bar
+		"xpos"			"c-215"
+		"ypos"			"c-220"
+		"zpos"			"0"
+		"wide"			"430"
+		"tall"			"32"
+		"visible"		"1"
+		"enabled"		"1"
+		"fillColor"		"25 25 25 200"
+	}
+	
+	"BasicBGText"
+	{
+		"ControlName"	"ImagePanel"
+		"fieldName"		"BasicBGText"
+		"xpos"			"c-250"
+		"ypos"			"c-180"
+		"zpos"			"0"
+		"wide"			"500"
+		"tall"			"369"
+		"visible"		"1"
+		"enabled"		"1"
+		"fillColor"		"25 25 25 200"
+	}
+	
 	"ShadedBar"
 	{
 		"ControlName"	"ImagePanel"
@@ -144,8 +177,8 @@
 		"tall"			"0"
 		"autoResize"	"0"
 		"pinCorner"		"0"
-		"visible"		"0"
-		"enabled"		"0"
+		"visible"		"1"
+		"enabled"		"1"
 		"tabPosition"	"0"	
 		"image"			"loadout_bottom_gradient"
 		"tileImage"		"1"

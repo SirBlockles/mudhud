@@ -17,7 +17,7 @@
 		"wide"				"f0"
 		"tall"				"480"
 		"visible"			"0"		// Change to "1" to enable
-		"enabled"			"0"		// Change to "1" to enable
+		"enabled"			"1"		// Change to "1" to enable
 		"image"				"../vgui/replay/thumbnails/transparent"
 		"scaleImage"		"1"
 	}

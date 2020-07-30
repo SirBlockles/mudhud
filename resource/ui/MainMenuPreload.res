@@ -767,5 +767,47 @@
 			"scaleImage"	"1"
 			"image"			"../vgui/replay/thumbnails/pup_canteen_outline"
 		}
+		
+		"redbg"
+		{
+			"ControlName"	"ImagePanel"
+			"fieldname"		"redbg"
+			"xpos"			"196"
+			"ypos"			"70"
+			"zpos"			"11"
+			"wide"			"32"
+			"tall"			"32"
+			"visible"		"1"
+			"scaleImage"	"1"
+			"image"			"../vgui/replay/thumbnails/redbg"	
+		}
+		
+		"blubg"
+		{
+			"ControlName"	"ImagePanel"
+			"fieldname"		"blubg"
+			"xpos"			"196"
+			"ypos"			"2"
+			"zpos"			"11"
+			"wide"			"32"
+			"tall"			"32"
+			"visible"		"1"
+			"scaleImage"	"1"
+			"image"			"../vgui/replay/thumbnails/blubg"	
+		}
+		
+		"graybg"
+		{
+			"ControlName"	"ImagePanel"
+			"fieldname"		"graybg"
+			"xpos"			"196"
+			"ypos"			"36"
+			"zpos"			"11"
+			"wide"			"32"
+			"tall"			"32"
+			"visible"		"1"
+			"scaleImage"	"1"
+			"image"			"../vgui/replay/thumbnails/graybg"	
+		}
 	}
 }

@@ -794,34 +794,24 @@
 		}
 	}
 	
-	"CountdownBG"
+	"MvMCountdownBG"
 	{
 		"ControlName"		"ScalableImagePanel"
-		"fieldName"		"CountdownBG"
-		"xpos"			"c-20"
-		"ypos"			"70"
+		"fieldName"		"MvMCountdownBG"
+		"xpos"			"c-40"
+		"ypos"			"r151"
 		"zpos"			"-1"
-		"wide"			"40"
-		"tall"			"40"
-		"autoResize"		"0"
+		"wide"			"80"
+		"tall"			"80"
+		"autoResize"		"1"
 		"pinCorner"		"0"
 		"visible"		"0"
 		"enabled"		"1"
-		"image"			"../HUD/color_panel_red"
-
-		"src_corner_height"	"23"				// pixels inside the image
-		"src_corner_width"	"23"
+		"image"			"../HUD/objectives_flagpanel_compass_red_noarrow"
 		
-		"draw_corner_width"	"5"				// screen size of the corners ( and sides ), proportional
-		"draw_corner_height" 	"5"	
-		
-		if_competitive
+		if_mvm
 		{
-			"wide"	"0"
-		}
-		if_readymode
-		{
-			"wide"	"0"
+			"visible"	"1"
 		}
 	}
 
@@ -860,8 +850,8 @@
 		"ControlName"		"CExLabel"
 		"fieldName"		"CountdownLabel2"
 		"font"			"RobotoBold24"
-		"xpos"			"c-200"
-		"ypos"			"40"
+		"xpos"			"999"
+		"ypos"			"r161"
 		"wide"			"400"
 		"tall"			"100"
 		"zpos"			"1"
@@ -913,8 +903,8 @@
 		"ControlName"		"CExLabel"
 		"fieldName"		"CountdownLabelShadow2"
 		"font"			"RobotoBold24"
-		"xpos"			"c-200"
-		"ypos"			"40"
+		"xpos"			"999"
+		"ypos"			"r161"
 		"wide"			"401"
 		"tall"			"101"
 		"zpos"			"0"
@@ -928,6 +918,7 @@
 		"fgcolor"		"Black"
 		if_mvm
 		{
+			"xpos"		"c-200"
 			"visible"	"1"
 		}
 	}
