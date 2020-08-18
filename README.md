@@ -1,15 +1,11 @@
-# MudHUD
-Based on the old TeamFortressTV HUD (which was a fan recreation of the actual casting HUD). Some kind soul ported this to Blue Moon, but it was entirely broken and obviously untested.
+# mudhud
+There once was a HUD named TeamFortressTV HUD. It was a fan-made HUD, and I loved it a lot. I saw Hypnotize [update it](https://github.com/Hypnootize/TFTV-Hud), but back when I created mudhud it was broken. TFTV HUD has been fixed since, but by now I've changed so much about this HUD that it's become its own hud. Feedback I get on this HUD is either love or hate, never anywhere in between.
 
-I've taken it upon myself, someone who's never formally edited and maintained a HUD before, to edit and maintain this HUD.
+This is my first-ever HUD, and so some things will be pretty god-awful. And honestly I don't care.
 
-Changes from the original port:
-* HP and ammo numbers are now closer to the center of the screen, and have drop shadows to increase visibility.
-* The main menu has been updated to work properly instead of being dummied out.
-* The casual mode "team status" bar now has larger class portraits, player names, and overheal bar scale tweaking (a full 150% HP now has the overheal bar fully cover the health bar, rather than filling 50% extra of the bar).
-* Stopwatch time, KOTH timers (+ "overtime" notices), and Arena player counts have all properly been integrated into the casual team status bar.
-* Custom, larger control point icons, with custom renames of the Steel point icons because who even cares about the names Valve gave to those points?
-* Tournament mode spectator HUD now properly spaces players, are a smidge wider, and can scale anywhere from Ultiduo to Highlander in player count.
-* Closed Caption "box" is now properly placed into the HUD so that it doesn't collide with any HUD elements, for those who use captions in scripting or game info.
-* Miscellaneous aesthetic tweaks (ie the health cross by the player's HP).
-* Probably more that I can't remember.
+This HUD is _only_ tested on 16:9 (1920x1080) in dx9. Since this is technically a personal HUD, I have little interest in upkeeping support for other resolutions, though I will probably get around to it eventually.
+
+### Known problems:
+The 3D Playermodel quite frequently covers up TargetIDs. Obviously I should reposition one of the two, but I don't really know which since I like them both where they are.
+
+The countdown in Casual/Competitive modes look kinda stupid and have double countdowns. I don't have much opportunity to fix this since I can't figure out how to simluate the countdown without rejoining Casual over and over, and just forget it for Competitive.
