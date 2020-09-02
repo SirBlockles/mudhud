@@ -767,6 +767,10 @@
 		{
 			"ypos"		"12"
 		}
+		if_competitive
+		{
+			"ypos"		"74"
+		}
 	}
 	
 	"TournamentInstructionsLabelShadow"
@@ -791,6 +795,10 @@
 		if_readymode
 		{
 			"ypos"		"12"
+		}
+		if_competitive
+		{
+			"ypos"		"74"
 		}
 	}
 	
