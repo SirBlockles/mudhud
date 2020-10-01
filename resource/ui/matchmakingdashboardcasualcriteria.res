@@ -66,10 +66,10 @@
 	{
 		"ControlName"	"CExButton"
 		"fieldName"		"QueueButton"
-		"xpos"			"108"
+		"xpos"			"98"
 		"ypos"			"rs1-4"
 		"zpos"			"100"
-		"wide"			"f122"
+		"wide"			"158"
 		"tall"			"20"
 		"autoResize"	"0"
 		"pinCorner"		"3"
