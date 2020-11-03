@@ -1246,12 +1246,12 @@
 	{
 		"ControlName"	"EditablePanel"
 		"fieldName"		"HudAchievementTracker"
-		"xpos"			"5"
-		"NormalY"		"10"
-		"EngineerY"		"170"
+		"xpos"			"0"
+		"NormalY"		"380"
+		"EngineerY"		"380"
 		"zpos"			"2"
-		"wide"			"200"
-		"tall"			"280"
+		"wide"			"f0"
+		"tall"			"480"
 		"visible"		"1"
 		"enabled"		"1"	
 	}

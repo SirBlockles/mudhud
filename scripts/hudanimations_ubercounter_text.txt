@@ -1,0 +1,128 @@
+//Tricked-out version of Mr. Slin's uber-tracker HUD.
+//Featuring a bar AND numbers, and the bar is a smooth-moving element instead of 100 mini-bars that fill their solidity in.
+//An IM admin said the script was RGL-HL legal as of Season 3, but I still have yet to check if that's still the case today.
+//And besides, I forget which admin said it was OK cause I just screenshared it in voice chat. Double-check if it's OK to use in comp!
+
+event FillUber
+{
+	//NUMBERS
+	RunEvent OnesPlace 0.0
+	RunEvent OnesPlace 5.5
+	SetVisible UberDigit9 0 5.5 //manually clear the 9 digit here since it ignores being cleared in the OnesPlace function
+	SetVisible UberDigit10 1 5.5
+	RunEvent OnesPlace 11.0
+	SetVisible UberDigit9 0 11.0
+	SetVisible UberDigit10 0 11.0
+	SetVisible UberDigit20 1 11.0
+	RunEvent OnesPlace 16.5
+	SetVisible UberDigit9 0 16.5
+	SetVisible UberDigit20 0 16.5
+	SetVisible UberDigit30 1 16.5
+	RunEvent OnesPlace 22.0
+	SetVisible UberDigit9 0 22.0
+	SetVisible UberDigit30 0 22.0
+	SetVisible UberDigit40 1 22.0
+	RunEvent OnesPlace 27.5
+	SetVisible UberDigit9 0 27.5
+	SetVisible UberDigit40 0 27.5
+	SetVisible UberDigit50 1 27.5
+	RunEvent OnesPlace 33.0
+	SetVisible UberDigit9 0 33.0
+	SetVisible UberDigit50 0 33.0
+	SetVisible UberDigit60 1 33.0
+	RunEvent OnesPlace 38.5
+	SetVisible UberDigit9 0 38.5
+	SetVisible UberDigit60 0 38.5
+	SetVisible UberDigit70 1 38.5
+	RunEvent OnesPlace 44.0
+	SetVisible UberDigit9 0 44.0
+	SetVisible UberDigit70 0 44.0
+	SetVisible UberDigit80 1 44.0
+	RunEvent OnesPlace 49.5
+	SetVisible UberDigit9 0 49.5
+	SetVisible UberDigit80 0 49.5
+	SetVisible UberDigit90 1 49.5
+	SetVisible UberDigit90 0 55.0
+	SetVisible UberDigit9 0 55.0
+	SetVisible UberDigit0 1 55.0
+	SetVisible UberDigit00 1 55.0
+	SetVisible UberDigit100 1 55.0
+}
+
+event OnesPlace
+{
+	SetVisible UberDigit0 1 0.0
+	SetVisible UberDigit0 0 0.55
+	SetVisible UberDigit1 1 0.55
+	SetVisible UberDigit1 0 1.1
+	SetVisible UberDigit2 1 1.1
+	SetVisible UberDigit2 0 1.65
+	SetVisible UberDigit3 1 1.65
+	SetVisible UberDigit3 0 2.2
+	SetVisible UberDigit4 1 2.2
+	SetVisible UberDigit4 0 2.75
+	SetVisible UberDigit5 1 2.75
+	SetVisible UberDigit5 0 3.3
+	SetVisible UberDigit6 1 3.3
+	SetVisible UberDigit6 0 3.85
+	SetVisible UberDigit7 1 3.85
+	SetVisible UberDigit7 0 4.4
+	SetVisible UberDigit8 1 4.4
+	SetVisible UberDigit8 0 4.95
+	SetVisible UberDigit9 1 4.95
+}
+
+event ClearUber
+{
+	SetVisible UberDigit0 0 0
+	SetVisible UberDigit1 0 0.01
+	SetVisible UberDigit2 0 0.02
+	SetVisible UberDigit3 0 0.03
+	SetVisible UberDigit4 0 0.04
+	SetVisible UberDigit5 0 0.05
+	SetVisible UberDigit6 0 0.06
+	SetVisible UberDigit7 0 0.07
+	SetVisible UberDigit8 0 0.08
+	SetVisible UberDigit9 0 0.09
+	SetVisible UberDigit00 0 0.1
+	SetVisible UberDigit10 0 0.11
+	SetVisible UberDigit20 0 0.12
+	SetVisible UberDigit30 0 0.13
+	SetVisible UberDigit40 0 0.14
+	SetVisible UberDigit50 0 0.15
+	SetVisible UberDigit60 0 0.16
+	SetVisible UberDigit70 0 0.17
+	SetVisible UberDigit80 0 0.18
+	SetVisible UberDigit90 0 0.19
+	SetVisible UberDigit100 0 0.2
+}
+
+event MenuOpen
+{
+	StopEvent	MenuClose 0.0
+
+	// fade in
+	Animate HudMenu Alpha 		"255"		Linear 0.0 0.1
+	Animate HudMenu SelectionAlpha 	"255"		Linear 0.0 0.1
+	Animate HudMenu FgColor		"FgColor"	Linear 0.0 0.1
+	Animate HudMenu MenuColor	"MenuColor"	Linear 0.0 0.1
+	Animate HudMenu ItemColor	"ItemColor"	Linear 0.0 0.1
+	Animate HudMenu TextScan	"1"		Linear 0.0 0.1
+
+	// Undo any blur
+	Animate HudMenu		Blur	"1"		Linear	0.0		0.01
+	StopEvent FillUber 0.0
+	StopEvent OnesPlace 0.0
+	RunEvent ClearUber 0.0
+}
+
+event MenuClose
+{
+	// Hide it
+	Animate HudMenu Alpha 		"0" Linear 0.0 1
+	Animate HudMenu SelectionAlpha 	"0" Linear 0.0 1
+	Animate HudMenu FgColor		"0 0 0 0" Linear 0.0 1
+	Animate HudMenu MenuColor	"0 0 0 0" Linear 0.0 1
+	Animate HudMenu ItemColor	"0 0 0 0" Linear 0.0 1
+	RunEvent FillUber 0.0
+}

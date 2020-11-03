@@ -1,6 +1,16 @@
 hudanimations_manifest
 {
+	//custom hud anims. LEAVE THIS AT THE TOP ALWAYS
 	"file" "scripts/hudanimations_custom.txt"
-	"file" "scripts/hudanimations_ubercounter.txt" // COMMENT THIS OUT TO DISABLE THE UBER COUNTER. It's RGL (HL) legal as of season 3 (i asked admins), but if you're wary, comment it out to disable the functionality.
-	"file" "scripts/hudanimations_tf.txt"			// ^ until i figure out a way to make it work without being as stutter-y and crash-y, it's disabled by default.
+	
+	//uber counter anims. if you ONLY want the bar OR text, uncomment one of them here.
+	//if you want both, uncomment the both file. IF YOU JUST UNCOMMENT BAR AND TEXT YOU WILL ONLY HAVE THE BAR!
+	//as of RGL HL season 3, i was told by a division admin that it was legal for use in HL. dunno if that's still the case though.
+	
+	"file" "scripts/hudanimations_ubercounter_bar.txt"
+	//"file" "scripts/hudanimations_ubercounter_text.txt"
+	//"file" "scripts/hudanimations_ubercounter_both.txt"			//enabling both at once seems to give the game a microstutter when resetting the counter that isn't an issue when using only one.
+	
+	//default TF anims. LEAVE THIS AT THE BOTTOM ALWAYS
+	"file" "scripts/hudanimations_tf.txt"
 }

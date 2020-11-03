@@ -4731,6 +4731,29 @@ Scheme
 			}
 		}
 		
+		RobotoRegular10_quest
+		{
+			"1"
+			{
+				"name"		"Roboto Regular"
+				"tall"		"10"
+				"weight"	"0"
+				"additive"	"1"
+				"antialias"	"1"
+			}
+		}
+		
+		RobotoRegular10_questglow
+		{
+			"1"
+			{
+				"name"		"Roboto Regular"
+				"tall"		"10"
+				"weight"	"0"
+				"antialias"	"1"
+			}
+		}
+		
 		RobotoRegular12
 		{
 			"1"
