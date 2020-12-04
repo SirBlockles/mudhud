@@ -5,7 +5,6 @@ hudanimations_manifest
 	
 	//uber counter anims. if you ONLY want the bar OR text, uncomment one of them here.
 	//if you want both, uncomment the both file. IF YOU JUST UNCOMMENT BAR AND TEXT YOU WILL ONLY HAVE THE BAR!
-	//as of RGL HL season 3, i was told by a division admin that it was legal for use in HL. dunno if that's still the case though.
 	
 	"file" "scripts/hudanimations_ubercounter_bar.txt"
 	//"file" "scripts/hudanimations_ubercounter_text.txt"
