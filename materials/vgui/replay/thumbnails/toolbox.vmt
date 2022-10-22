@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$baseTexture" "vgui\replay\thumbnails\toolbox"
+	"$nolod" 1
+	"$translucent" 1
+}

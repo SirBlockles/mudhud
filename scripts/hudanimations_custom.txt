@@ -1,20 +1,18 @@
 //===========================================
 
-//Health Bonus Pulse
+//Health Bonus Pulse, run once then run separate loop
 event HudHealthBonusPulse
 {
-	Animate	PlayerStatusHealthBonusImage 	Alpha		"100"		Linear 0.0 0.2
-	Animate	PlayerStatusHealthBonusImage 	Alpha		"0"			Linear 0.2 0.4
-	
-	Animate PlayerStatusHealthValue			FgColor		"91 240 131 255"	Linear 0.0 0.0
+	Animate	PlayerStatusHealthBonusImage 	Alpha		"0"		Linear 0.0 0.005
+
+	Animate PlayerStatusHealthValue			FgColor		"105 255 105 255"	Linear 0.0 0.2
+	Animate PlayerStatusHealthValue			FgColor		"0 255 0 255"	Linear 0.2 0.4
 	
 	Animate GreenFilter						Alpha		"255"	Linear	0.0 0.2
 	Animate GreenFilter						Alpha		"0"		Linear	0.2 0.4
 	
-	Animate CrosshairDot	FgColor	"40 175 70 255"	Linear 0.0 0.2
-	Animate CrosshairDot	FgColor	"125 245 165 255"	Linear 0.2 0.4
-	Animate CrosshairWings	FgColor	"40 175 70 255"	Linear 0.0 0.2
-	Animate CrosshairWings	FgColor	"125 245 165 255"	Linear 0.2 0.4
+	Animate HPBar_MainFill	bgcolor	"105 255 105 255"	Linear 0.0 0.2
+	Animate HPBar_MainFill	bgcolor	"0 255 0 255"	Linear 0.2 0.4
 
 	RunEvent HudHealthBonusPulseLoop	0.4
 }
@@ -29,13 +27,12 @@ event HudHealthBonusPulseStop
 {
 	StopEvent HudHealthBonusPulse 0.0
 	StopEvent HudHealthBonusPulseLoop 0.0
-	StopEvent HudCrosshairBonusPulse 0.0
-	StopEvent HudCrosshairBonusPulseLoop 0.0
+
+	Animate PlayerStatusHealthBonusImage Alpha 255 Linear 0.0 0.005
 	
 	Animate PlayerStatusHealthValue		FgColor		"White_Custom"	Linear 0.0 0.0
 	Animate GreenFilter					Alpha		"0"				"Accel"	0.0 0.25
-	Animate CrosshairDot				FgColor		"255 150 0 255"	"Accel"	0.0 0.25
-	Animate CrosshairWings				FgColor		"255 150 0 255"	"Accel"	0.0 0.25
+	Animate HPBar_MainFill				bgcolor		"195 245 195 200"	"Accel"	0.0 0.25
 }
 
 //===========================================
@@ -43,17 +40,8 @@ event HudHealthBonusPulseStop
 //Health Dying Pulse
 event HudHealthDyingPulse
 {
-	Animate	PlayerStatusHealthBonusImage 	Alpha		"100"		Linear 0.0 0.075
-	Animate	PlayerStatusHealthBonusImage 	Alpha		"0"			Linear 0.125 0.075
-	
-	Animate PlayerStatusHealthValue			FgColor		"255 200 0 255"	Linear 0.0 0.0
-	Animate PlayerStatusHealthValueSpec			FgColor		"255 200 0 255"	Linear 0.0 0.0
-	
-	Animate CrosshairDot	FgColor	"185 65 65 255"	Linear 0.0 0.14
-	Animate CrosshairDot	FgColor	"255 190 190 255"	Linear 0.14 0.25
-	Animate CrosshairWings	FgColor	"185 65 65 255"	Linear 0.0 0.14
-	Animate CrosshairWings	FgColor	"255 190 190 255"	Linear 0.14 0.25
-	
+	Animate	PlayerStatusHealthBonusImage 	Alpha		"255"		Linear 0.0 0.005
+
 	RunEvent HudHealthDyingPulseLoop	0.25
 }
 
@@ -72,6 +60,7 @@ event HudHealthDyingPulseStop
 	Animate PlayerStatusHealthValueSpec			FgColor		"White_Custom"	Linear 0.0 0.0
 	Animate CrosshairDot				FgColor		"255 150 0 255"	"Accel"	0.0 0.14
 	Animate CrosshairWings				FgColor		"255 150 0 255"	"Accel"	0.0 0.14
+	Animate	PlayerStatusHealthBonusImage 	Alpha		"255"		Linear 0.0 0.005
 }
 
 //===========================================
@@ -107,11 +96,11 @@ event HudLowAmmoPulseStop
 
 event HudMedicCharged
 {
-	Animate	ChargeLabel 	FgColor		"91 240 131 255"		Linear 0.0 0.3
-	Animate	ChargeLabel 	FgColor		"91 157 109 255"		Linear 0.3 0.3
+	Animate	ChargeLabel 	FgColor		"200 0 255 255"		Linear 0.0 0.3
+	Animate	ChargeLabel 	FgColor		"255 0 255 255"		Linear 0.3 0.3
 	
-	Animate	ChargeMeter 	FgColor		"91 240 131 255"		Linear 0.0 0.3	
-	Animate	ChargeMeter 	FgColor		"91 157 109 255"		Linear 0.3 0.3
+	Animate	ChargeMeter 	FgColor		"200 0 255 255"		Linear 0.0 0.3	
+	Animate	ChargeMeter 	FgColor		"255 0 255 255"		Linear 0.3 0.3
 	
 	Animate	HealthClusterIcon 	drawcolor		"91 240 131 255"		Linear 0.0 0.3
 	Animate	HealthClusterIcon 	drawcolor		"91 157 109 255"		Linear 0.3 0.3
@@ -131,7 +120,7 @@ event HudMedicChargedStop
 	StopEvent HudMedicChargedLoop 0.0
 	
 	Animate	ChargeLabel 	FgColor		"White_Custom"		Linear 0.0 0.0001
-	Animate	ChargeMeter 	FgColor		"200 255 200 255"		Linear 0.0 0.0001
+	Animate	ChargeMeter 	FgColor		"195 105 255 255"		Linear 0.0 0.0001
 	Animate	HealthClusterIcon 	drawcolor		"White_Custom"		Linear 0.0 0.0001
 }
 

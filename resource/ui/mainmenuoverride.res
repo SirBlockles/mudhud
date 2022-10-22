@@ -378,7 +378,7 @@
 		"ControlName"	"CExLabel"
 		"fieldName"		"MudHudText"
 		"font"			"RobotoCondensedBold12"
-		"labelText"		"mudhud v1.0 PRE-RELEASE"
+		"labelText"		"mudhud 2 INDEV"
 		"textAlignment"	"center"
 		"xpos"			"c-569"
 		"ypos"			"87"

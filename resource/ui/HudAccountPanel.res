@@ -2,13 +2,13 @@
 {
 	"CHudAccountPanel"
 	{
-		"delta_item_x"			"68"
-		"delta_item_start_y"	"999"
-		"delta_item_end_y"		"999"
+		"delta_item_x"			"16"
+		"delta_item_start_y"	"21"
+		"delta_item_end_y"		"26"
 		"PositiveColor"			"0 225 0 255"
 		"NegativeColor"			"255 0 0 255"
-		"delta_lifetime"		"1.2"
-		"delta_item_font"		"RobotoBold16"
+		"delta_lifetime"		"0.0" //change this value to add +metal -metal elements
+		"delta_item_font"		"RobotoCondensedRegular16"
 		
 	}
 	
@@ -39,7 +39,7 @@
 		"wide"			"10"
 		"tall"			"10"
 		"visible"		"0" //set to 1 to enable the little wrench icon
-		"enabled"		"1"
+		"enabled"		"0"
 		"scaleImage"	"1"	
 		"icon"			"ico_metal"
 		"iconColor"		"255 255 255 255"
@@ -49,21 +49,56 @@
 	{
 		"ControlName"	"CExLabel"
 		"fieldName"		"AccountValue"
-		"xpos"			"0"
-		"ypos"			"20"
+		"xpos"			"15"
+		"ypos"			"2"
 		"zpos"			"2"
-		"wide"			"160"
-		"tall"			"20"
+		"wide"			"30"
+		"tall"			"24"
 		"autoResize"	"1"
 		"pinCorner"		"2"
 		"visible"		"1"
 		"enabled"		"1"
 		"tabPosition"	"0"
 		"labelText"		"%metal%"
-		"textAlignment"	"center"
-		"dulltext"		"0"
-		"brighttext"	"0"
-		"font"			"RobotoBold20"
+		"textAlignment"	"left"
+		"font"			"RobotoCondensedBold24"
 		"fgcolor" "255 255 255 255"
+	}
+
+	"AccountValueShadow"
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"AccountValueShadow"
+		"xpos"			"16"
+		"ypos"			"3"
+		"zpos"			"2"
+		"wide"			"30"
+		"tall"			"24"
+		"autoResize"	"1"
+		"pinCorner"		"2"
+		"visible"		"1"
+		"enabled"		"1"
+		"tabPosition"	"0"
+		"labelText"		"%metal%"
+		"textAlignment"	"left"
+		"font"			"RobotoCondensedBold24"
+		"fgcolor" "0 0 0 255"
+	}
+
+	"MP_FlavorLabel"
+	{
+		"ControlName"	"CExLabel"
+		"fieldName"		"MP_FlavorLabel"
+		"xpos"			"0"
+		"ypos"			"5"
+		"zpos"			"12"
+		"wide"			"20"
+		"tall"			"12"
+		"visible"		"1"
+		"enabled"		"1"
+		"labelText"		"MP"
+		"textAlignment"	"left"	
+		"font"			"RobotoRegular12"
+		"fgcolor"		"White_Custom"
 	}
 }

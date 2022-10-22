@@ -1,0 +1,6 @@
+"UnlitGeneric"
+{
+	"$baseTexture" "vgui\replay\thumbnails\hud_obj_status_down"
+	"$nolod" 1
+	"$translucent" 1
+}

@@ -282,11 +282,6 @@
 		"delta_lifetime"		"1.5"
 		"delta_item_font"		"RobotoCondensedBold12"
 		
-		if_match
-		{
-			"zpos"			"4"
-		}
-		
 		"TimePanelValue"
 		{
 			"ControlName"		"CExLabel"
@@ -321,7 +316,7 @@
 		
 		"6v6_gap"				"-1"
 		"12v12_gap"				"-2"
-
+		
 		// BLU
 		"team1_grow_dir"		"west"
 		"team1_base_x"			"c-29"
@@ -343,12 +338,14 @@
 			"color_portrait_bg_blue"			"62 81 101 255"
 			"color_portrait_bg_red_dead"		"79 54 52 255"
 			"color_portrait_bg_blue_dead"		"44 49 51 255"
+			
 			"color_bar_health_high"				"65 190 55 255"
 			"color_bar_health_overheal"			"255 255 255 255"
 			"color_bar_health_med"				"255 255 50 255"
 			"percentage_health_med"				"0.6"
 			"color_bar_health_low"				"255 25 25 255"
 			"percentage_health_low"				"0.3"
+			
 			"color_portrait_blend_dead_red"		"255 255 255 255"
 			"color_portrait_blend_dead_blue"	"255 255 255 255"
 			
@@ -439,37 +436,6 @@
 				"TFFont"					"DefaultVerySmall"
 				"HealthDeathWarningColor"	"HUDDeathWarning"
 				"TextColor"					"HudOffWhite"
-			}
-			"ReadyBG"
-			{
-				"ControlName"		"ScalableImagePanel"
-				"fieldName"		"ReadyBG"
-				"xpos"			"9999"
-				"ypos"			"9999"
-				"zpos"			"-1"
-				"wide"			"0"
-				"tall"			"0"
-				"autoResize"	"0"
-				"pinCorner"		"0"
-				"visible"		"0"
-				"enabled"		"0"
-				"image"			"../HUD/tournament_panel_brown"
-			}
-			"ReadyImage"
-			{
-				"ControlName"		"ImagePanel"
-				"fieldName"		"ReadyImage"
-				"xpos"			"3"
-				"ypos"			"1"
-				"zpos"			"10"
-				"wide"			"0"
-				"tall"			"0"
-				"autoResize"	"0"
-				"pinCorner"		"0"
-				"visible"		"0"
-				"enabled"		"0"
-				"image"			"hud/checkmark"
-				"scaleImage"	"1"
 			}
 			"respawntime"
 			{

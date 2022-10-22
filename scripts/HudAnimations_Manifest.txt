@@ -6,9 +6,9 @@ hudanimations_manifest
 	//uber counter anims. if you ONLY want the bar OR text, uncomment one of them here.
 	//if you want both, uncomment the both file. IF YOU JUST UNCOMMENT BAR AND TEXT YOU WILL ONLY HAVE THE BAR!
 	
-	"file" "scripts/hudanimations_ubercounter_bar.txt"
+	//"file" "scripts/hudanimations_ubercounter_bar.txt"
 	//"file" "scripts/hudanimations_ubercounter_text.txt"
-	//"file" "scripts/hudanimations_ubercounter_both.txt"			//enabling both at once seems to give the game a microstutter when resetting the counter that isn't an issue when using only one.
+	"file" "scripts/hudanimations_ubercounter_both.txt"			//enabling both at once seems to give the game a microstutter when resetting the counter that isn't an issue when using only one.
 	
 	//default TF anims. LEAVE THIS AT THE BOTTOM ALWAYS
 	"file" "scripts/hudanimations_tf.txt"

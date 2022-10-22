@@ -16,15 +16,15 @@
 		"zpos"				"-100"
 		"wide"				"f0"
 		"tall"				"480"
-		"visible"			"0"		// Change to "1" to enable
 		"enabled"			"1"		// Change to "1" to enable
+		"visible"			"1"		// Change to "1" to enable
 		"image"				"../vgui/replay/thumbnails/transparent"
 		"scaleImage"		"1"
 	}
 	//--------------------------------------------------------------
 	CrosshairDot
 	{
-		"visible" 			"0"
+		"visible" 			"1"
 		"enabled" 			"1"
 		"labelText"			"l"
 		"controlName"		"CExLabel"
@@ -33,14 +33,14 @@
 		"xpos" 		 		"c-13"
 		"ypos" 		 		"c-13"
 		"wide" 		 		"26"
-		"tall" 		 		"25"
+		"tall" 		 		"26"
 		"font"				"Crosshair"
 		"textAlignment"		"center"
 		"fgcolor" 			"255 150 0 255"
 	}
 	CrosshairWings
 	{
-		"visible" 			"0"
+		"visible" 			"1"
 		"enabled" 			"1"
 		"labelText"			"m" //$
 		"controlName"		"CExLabel"
@@ -49,7 +49,7 @@
 		"xpos" 		 		"c-13"
 		"ypos" 		 		"c-13"
 		"wide" 		 		"26"
-		"tall" 		 		"25"
+		"tall" 		 		"26"
 		"font"				"Crosshair"
 		"textAlignment"		"center"
 		"fgcolor" 			"255 150 0 255"
@@ -65,7 +65,7 @@
 		"xpos" 		 		"c-13"
 		"ypos" 		 		"c-13"
 		"wide" 		 		"26"
-		"tall" 		 		"25"
+		"tall" 		 		"26"
 		"font"				"Crosshair"
 		"textAlignment"		"center"
 		"fgcolor" 			"0 192 192 0"
@@ -87,10 +87,11 @@
 		"fieldName" "HudWeaponAmmo"
 		"visible" "1"
 		"enabled" "1"
-		"xpos"	"0"
-		"ypos"	"0"
-		"wide"	"f0"
-		"tall"	"f0"
+		"xpos"	"c-61"
+		"ypos"	"280"
+		"zpos"	"10"
+		"wide"	"122"
+		"tall"	"50"
 	}
 	
 	HudObjectiveStatus
@@ -136,10 +137,11 @@
 		"fieldName"		"HudMedicCharge"
 		"visible"		"1"
 		"enabled"		"1"
-		"xpos"			"0"
-		"ypos"			"0"
-		"wide"			"f0"
-		"tall"			"f0"
+		"xpos"	"c-61"
+		"ypos"	"280"
+		"zpos"	"10"
+		"wide"	"122"
+		"tall"	"65"
 	}
 	
 	HudDemomanCharge
@@ -245,9 +247,9 @@
 	CHudAccountPanel
 	{
 		"fieldName"				"CHudAccountPanel"
-		"xpos"					"c-80"
-		"ypos"					"246"
-		"wide"					"160"
+		"xpos"					"c-61"
+		"ypos"					"300"
+		"wide"					"122"
 		"tall"  				"180"
 		"visible" 				"1"
 		"enabled" 				"1"
@@ -296,16 +298,10 @@
 		"visible" 	"0"
 		"enabled" 	"1"
 		"xpos"		"c-126"
-		"ypos"		"335"
+		"ypos"		"336"
 		"wide"	 	"252"
-		"tall"	 	"30"
+		"tall"	 	"23"
 		"priority"	"40"
-
-		if_vr
-		{
-			"ypos"		"370"
-			"x_offset"	"20"
-		}
 	}
 	
 	CSpectatorTargetID
@@ -314,9 +310,9 @@
 		"visible" 	"0"
 		"enabled" 	"1"
 		"xpos"		"c-126"
-		"ypos"		"335"
+		"ypos"		"345"
 		"wide"	 	"252"
-		"tall"	 	"30"
+		"tall"	 	"23"
 		"priority"	"40"
 		
 		"x_offset" "20"
@@ -329,17 +325,11 @@
 		"visible" 	"0"
 		"enabled" 	"1"
 		"xpos"		"c-126"
-		"ypos"		"308"
+		"ypos"		"250"
+		"zpos"		"7"
 		"wide"	 	"252"
-		"tall"	 	"30"
+		"tall"	 	"23"
 		"priority"	"35"
-
-		if_vr
-		{
-			"ypos"		"330"
-			"x_offset"	"20"
-		}
-
 	}
 	
 	BuildingStatus_Spy
@@ -347,10 +337,10 @@
 		"fieldName" "BuildingStatus_Spy"
 		"visible"	"1"
 		"enabled"	"1"
-		"xpos"		"-20"
-		"ypos"		"-225"
-		"wide"		"640"
-		"tall"		"480"
+		"xpos"		"0"
+		"ypos"		"0"
+		"wide"		"150"
+		"tall"		"250"
 		
 		"PaintBackgroundType"	"2"
 	}
@@ -360,10 +350,10 @@
 		"fieldName" "BuildingStatus_Engineer"
 		"visible"	"1"
 		"enabled"	"1"
-		"xpos"		"-20"
-		"ypos"		"-220"
-		"wide"		"640"
-		"tall"		"480"
+		"xpos"		"-12"
+		"ypos"		"-8"
+		"wide"		"116"
+		"tall"		"250"
 		
 		"PaintBackgroundType"	"2"
 	}

@@ -30,5 +30,7 @@
 		"tall"			"50"
 		"autoResize"	"0"
 		"fgcolor"		"25 137 221 255"
+		"visible"		"1"
+		"enabled"		"1"
 	}
 }
